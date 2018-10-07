@@ -2,10 +2,25 @@ doctype
 html
    head
       meta(chartset='utf-8')
-      title= 'Pug'
+      title= title
    body
-   h1='H1 Title'
+   include header.pug
+   h1(style={color:'red', background:'green'})= message
    hr
+   a(href='#'): img
    ul#menu.myClass
-        each n in [1,2,3,4,5,6,7,8]
-           li=n
+        each n in numbers
+           li=n 
+   script.
+        let num = 0;
+        if( num < 10 )
+            console.log(` ${num} < 10`)
+        else
+            console.log(` ${num} > 10`)
+
+
+   - let count = 0;
+    ul 
+       while count < 13
+              li=count++
+    include footer.pug
