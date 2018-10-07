@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake</title>
+    
+</head>
+
+<style>
+    *{
+        margin:0;
+    }
+body{
+    display: grid;
+    justify-content: center;
+    background-color: gray;
+}
+canvas{
+    display:none;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #FFFFFF;
+}
+h1{
+                display: inline-block;
+                width: 100px;
+                font-size: 32px;
+                color: #FFFFFF;
+    }
+    #gameover a, #setting a, #menu a{
+                display: block;
+    }
+        #gameover a, #setting a:hover, #menu a:hover{
+                cursor: pointer;
+    }
+            
+            #gameover a:hover::before, #setting a:hover::before, #menu a:hover::before{
+                content: ">";
+                margin-right: 10px;
+    }
+    #menu{
+                display: block;
+                width: 340px;
+                padding-top: 95px;
+                padding-bottom: 95px;
+                font-size: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                color: #FFF;
+     }
+       #gameover{
+                display: none;
+                width: 340px;
+                padding-top: 95px;
+                padding-bottom: 95px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-size: 30px;
+                color: #FFF;
+            }
+            
+            #gameover p{
+                margin-top: 25px;
+                font-size: 20px;
+            }
+        #settings{
+            
+                width: 200px;
+                /* padding-top: 95px; */
+                /* padding-bottom: 95px; */
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-size: 30px;
+                color: #FFF;
+        }
+        #settings p {
+            margin-top: 25px;
+                font-size: 20px;
+        } 
+</style>
+<body>
+        <div id="gameover">
+        <h2>Game Over</h2>
+        <h3 id='highscoreText'></h3>
+        <!-- <p>press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin a</p> -->
+        <a id="newgame_gameover">new game</a>
+        <!-- <a id="setting_gameover">settings</a> -->
+        </div>
+        
+    
+
+        <div id="menu">
+                <h2>Hello</h2>
+                <a id="newgame_menu">newgame</a>
+                <!-- <a id="setting_menu">settings</a> -->
+        </div>
+
+        <div id="settings">
+        
+                
+        <p>Speed:
+            <input id="speed1" type="radio" name="speed" value="300" checked/>
+            <label for="speed1">Slow</label>
+            <input id="speed2" type="radio" name="speed" value="200"/>
+            <label for="speed2">Intermediate</label>
+            <input id="speed3" type="radio" name="speed" value="100"/>
+            <label for="speed3">Hard</label>
+        </p>
+
+        <p>Apple Number
+            <input id="appleNumber" type="text" name="applenumber" value="1" />
+          
+       
+        </div>
+    <canvas id='canvas' width='600' height='600'></canvas>
+
+    
+
+    <script src="index.js"></script>
+
+
+</body>
+</html>
