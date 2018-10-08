@@ -2,21 +2,30 @@
 <html>
   <head>
     <meta chartset="utf-8">
-    <title>Pug</title>
+    <title>Product Details Form</title>
   </head>
-  <body></body>
-  <h1>H1 Title</h1>
-  <hr>
-  <ul class="myClass" id="menu">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-  </ul>
-
+ 
+  <body>
   
+
+  <h1> Product Details Form</h1>
+  <form action=""  id='form'>
+    <label for=""> Id
+        <input type="text" name='id'>
+    </label>
+    <label for=""> Name
+        <input type="text" name='name'>
+    </label>
+    <label for=""> Price 
+        <input type="text" name='price'>
+    </label>
+  
+  </form>
+
+  <form action="http://localhost:3000" method='POST'>
+    
+  <input type="submit" value='click'> 
+  </form>
+  <a href="http://localhost:3000/products">Show Products list</a>
+</body>
 </html>
