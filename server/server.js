@@ -107,10 +107,12 @@ app.get('/product/:id', (req, res) => {
    let product = products.find(p => p.id == id)
    if (!product) {
        // return res.status(404).send("no product found")
-       return res.sendStatus(404)
+       return res.sendStatus(404).send('kuku xar')
    } else {
+    //    console.log('kukuxar')
        res.json(product)
    }
+
 })
 
 app.get('/productname/:name', (req, res) => {

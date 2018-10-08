@@ -1,0 +1,22 @@
+doctype html 
+html
+    head
+        title= title
+    body
+        h1= title
+        hr
+        if added
+            p(style={'background-color': 'seagreen', 'padding' : '15px'}) Product Okay
+        
+        ul 
+            each product in productsDB
+                li= product.product_name
+        form(action="", method="post")
+            p
+                input(type='text', name='product_name', placeholder="Product Name", required)
+            p
+                input(type='number', name='product_id', placeholder="Product Id", required)
+            p
+                input( type='number', name='product_number', placeholder="Product Number", required)
+            p
+                button(type="submit") Save Product
