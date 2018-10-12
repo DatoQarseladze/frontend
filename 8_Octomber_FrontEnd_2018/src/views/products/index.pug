@@ -1,0 +1,13 @@
+mixin product(product)
+    div.product--block
+        h2.product--title--item= product.title 
+        h4.product--price= `Price  $${product.price.toString().slice(0,5)}`
+        a(href=`/products/${product.id}`).product--detail Details
+        
+include ../includes/header.pug
+body 
+    h1= title
+    hr
+    div.wrapper
+        each item in products
+            +product(item)
