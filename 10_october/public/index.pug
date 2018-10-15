@@ -1,0 +1,15 @@
+doctype
+html
+   head
+      meta(chartset='utf-8')
+      title= 'Hello'
+   body(style=`{background: ${color}}`)
+   h1(style={color:'red', background:'green'})= message
+   hr
+   h1='Select ur color'
+        form(action="/try", method="POST")
+            select(name="favcolor")
+                option(value="red" name='favcolor')= 'Red'
+                option(value="blue" name='favcolor')= 'Blue'
+                option(value="green" name='favcolor')= 'Green'
+            button= 'Submit'
