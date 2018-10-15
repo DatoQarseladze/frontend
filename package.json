@@ -8,8 +8,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
-    "nodemon": "^1.18.4"
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.4",
+    "pug-cli": "^1.0.0-alpha6"
   },
   "repository": {
     "type": "git",
