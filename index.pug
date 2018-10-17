@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        title= title
+    body
+        h1= title
+        hr
+        if added
+            p(style={'background-color': 'seagreen', 'padding': '15px'}) Product Okay
+        
+        ul
+            each element in productsDB
+                li= element.product_name
+        
+        form(action="", method="post")
+            p
+                input(type="text", name="product_name", placeholder="Product Name", required)
+            p
+                input(type="number", name="product_id", placeholder="Product Id", required)
+            p
+                input(type="number", name="product_price", placeholder="Product Price", required)
+            p
+                button(type="submit") Save Product 
+                br
+        form(action='http://localhost:3000/productsDB', method="get")
+                 button(type="text") Click to see Products   

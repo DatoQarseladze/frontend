@@ -1,0 +1,56 @@
+doctype
+html
+   head
+      meta(chartset='utf-8')
+      title= title
+   body(style={background: '#fff'})
+   hr
+   #wrapper(style={ display: 'grid'})
+    a(href="/products/graphic")= 'Graphic Card'
+    a(href='/products/hdmi')= 'HDMI Cable'
+    a(href='/products/ssd')= 'SSD Drive'
+    a(href='/products')= 'Go Back' 
+    h1= message
+
+    #wrapper
+
+    
+    table(style={width:'500px',   'border-style': 'groove',
+    'border-color': 'black',
+    'border-width': '3px'})
+        tr
+        each names in name
+                td= names
+        
+        
+        each element in product
+            tr
+            td= element.name
+            td= element.price
+            td= element.selected
+            td= `${element.price*element.selected}$`
+        
+    
+                 
+            //- tr(style={display:'center'})
+            //-     td='Name'
+            //-     td='Price'
+            //-     td='Quantity'
+            //-     td='Total'
+            //- tr
+            //-     td=graphic
+            //-     td=`${myproducts2.price}$`
+            //-     td=`${myproducts2.selected}`
+            //-     td=`${myproducts2.price* myproducts2.selected}$`
+            //- tr
+            //-     td=hdmi
+            //-     td=`${myproducts1.price}$`
+            //-     td=`${myproducts1.selected}`
+            //-     td=`${myproducts1.price* myproducts1.selected}$`
+            //- tr
+            //-     td=myproducts.name
+            //-     td=`${myproducts.price}$`
+            //-     td=`${myproducts.selected}`
+            //-     td=`${myproducts.price * myproducts.selected}$`
+    h1= `Total `
+            

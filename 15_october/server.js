@@ -11,27 +11,27 @@ app.use( session({ secret: 'super cat',
                    resave: true, 
                    saveUninitialized: true, }) )
 
-// let sessions = { 
-//          viewCount: 0,
-//          aboutCount: 0,
-//          contactCount: 0
-// }
-
-const myPages = {
-    main:{
-        url: '/',
-        count:0,
-    },
-    contact:{
-        url:'/contact',
-        count:0,
-    },
-    about:{
-        url:'/about',
-        count:0
-    }
-
+let sessions = { 
+         viewCount: 0,
+         aboutCount: 0,
+         contactCount: 0
 }
+
+// const myPages = {
+//     main:{
+//         url: '/',
+//         count:0,
+//     },
+//     contact:{
+//         url:'/contact',
+//         count:0,
+//     },
+//     about:{
+//         url:'/about',
+//         count:0
+//     }
+
+// }
 app.get('/', (req,res) =>{
     if( sessions.viewCount){
         sessions.viewCount++;
