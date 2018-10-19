@@ -1,0 +1,31 @@
+doctype
+html
+   head
+      meta(chartset='utf-8')
+      title= title
+   body(style={background: '#fff'})
+   hr
+   #wrapper(style={ display: 'inline-block'})
+    a(href="/cars")='Go to add Cars'
+    <br>
+    a(href="/searchPage")='Search Page'
+    form( action="/save", method='POST')
+        h3='Name : '
+            input(type="text" value='name' name='name', required)
+        h3='Surname : '
+            input(type="text" value='surname' name='surname', required)
+        h3='Personal Number : '
+            input(type='number'  name='personalNumber', required)
+        h3='Fathers Name : '
+            input(type="text", name='fatherName', )
+        h3='Birthday Date : '
+            input(type="date" name='bday', )
+        button(type='submit')='Submit'
+    form(action='/searchName/', method='GET')
+        h3='Search User By Name: '
+            input(type="text" name='searchName')
+            button(type='submit')='Search'
+    form(action='/searchPersonal', method='GET')
+        h3='Search User By Personal : '
+            input(type='number', name='searchPersonal')
+            button(type='submit')='Search'

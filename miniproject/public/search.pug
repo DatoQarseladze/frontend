@@ -1,0 +1,20 @@
+doctype
+html
+   head
+      meta(chartset='utf-8')
+      title= title
+   body(style={background: '#fff'})
+   hr
+   #wrapper(style={ display: 'inline-block'})
+    a(href="/cars")='Go to add Cars'
+    <br>
+    a(href="/")='Main page'
+    <br>
+     form(action='/searchPersonal', method='GET')
+        h3='Search User By Personal : '
+            input(type='number', name='searchPersonal')
+            button(type='submit')='Search'
+     form(action='/searchName/', method='GET')
+        h3='Search User By Name : '
+            input(type="text" name='searchName')
+            button(type='submit')='Search'
