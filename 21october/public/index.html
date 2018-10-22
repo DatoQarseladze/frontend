@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: red;
+    }
+.lds-default {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-default div {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  animation: lds-default 1.2s linear infinite;
+}
+.lds-default div:nth-child(1) {
+  animation-delay: 0s;
+  top: 29px;
+  left: 53px;
+}
+.lds-default div:nth-child(2) {
+  animation-delay: -0.1s;
+  top: 18px;
+  left: 50px;
+}
+.lds-default div:nth-child(3) {
+  animation-delay: -0.2s;
+  top: 9px;
+  left: 41px;
+}
+.lds-default div:nth-child(4) {
+  animation-delay: -0.3s;
+  top: 6px;
+  left: 29px;
+}
+.lds-default div:nth-child(5) {
+  animation-delay: -0.4s;
+  top: 9px;
+  left: 18px;
+}
+.lds-default div:nth-child(6) {
+  animation-delay: -0.5s;
+  top: 18px;
+  left: 9px;
+}
+.lds-default div:nth-child(7) {
+  animation-delay: -0.6s;
+  top: 29px;
+  left: 6px;
+}
+.lds-default div:nth-child(8) {
+  animation-delay: -0.7s;
+  top: 41px;
+  left: 9px;
+}
+.lds-default div:nth-child(9) {
+  animation-delay: -0.8s;
+  top: 50px;
+  left: 18px;
+}
+.lds-default div:nth-child(10) {
+  animation-delay: -0.9s;
+  top: 53px;
+  left: 29px;
+}
+.lds-default div:nth-child(11) {
+  animation-delay: -1s;
+  top: 50px;
+  left: 41px;
+}
+.lds-default div:nth-child(12) {
+  animation-delay: -1.1s;
+  top: 41px;
+  left: 50px;
+}
+.loader--show{
+    display:block;
+}
+.loader--hide{
+    display:none;
+}
+@keyframes lds-default {
+  0%, 20%, 80%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+</style>
+<body>
+      <label >
+        country name : <input type="text" id='countryName' List='countries' data-minlength='3'>
+      </label>
+
+      <datalist id='countries'>
+
+      </datalist>
+        <!-- <div> -->
+            <!-- <label> -->
+               <!-- Max: <input type="number" id='num_2'> -->
+            <!-- </label> -->
+        <!-- </div> -->
+        <br>
+        <!-- <div> -->
+            <!-- <button type='button' id='addBtn'>Add</button> -->
+        <!-- </div> -->
+        <br>
+        <span id='result'></span>
+        <div class="lds-default loader--hide" id="loader"><div>
+        </div><div>
+        </div><div>
+        </div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <script>
+          const addBtn = document.getElementById('addBtn');
+
+          // addBtn.addEventListener('click', ({target}) =>{
+          //   let num_1 = document.getElementById('num_1').value;
+          //   let num_2 = document.getElementById('num_2').value;
+            
+          //   let result = document.getElementById('result');
+          //   let loader = document.getElementById('loader');
+          //   loader.classList.add('loader--show')
+          //   loader.classList.remove('loader--hide');
+          //   let url = `https://gist.githubusercontent.com/keeguon/2310008/raw/bdc2ce1c1e3f28f9cab5b4393c7549f38361be4e/countries.json`
+
+          //   fetch(url, {
+          //     method: 'GET',
+          //   }).then(res =>{
+          //     return res.text();
+          //   }).then( data =>{
+          //     console.log(data);
+          //   })
+            // fetch(url, {
+            //     method: 'GET',
+            // })
+            // .then( res =>{
+            //     return res.text()
+            // })
+            // .then( data => {
+            //     console.log(data);
+            //     result.innerHTML = `Sum is ${data}`
+            // })
+            // .finally(() =>{
+            //     loader.classList.remove('loader--show')
+            //     loader.classList.add('loader--hide');
+            // })
+            // .catch( err => {
+            //     console.error(err);
+            // })
+            // $.ajax({
+            //   url: '/add',
+            //   method:'GET',
+            //   data: {num_1, num_2}
+            // }).done( data => {
+            //   console.log(data)
+            //   hideLoader(loader);
+            // })
+            // .always(() =>{
+            //   hideLoader(loader);
+            // })
+            // $.get('/add', {
+            //   data:{num_1, num_2}
+            // }, function(data){
+            //   result.innerHTML = `Sum is ${data}`
+            // })
+          // })
+          
+          function showLoader(loader){
+            loader.classList.add('loader--show')
+            loader.classList.remove('loader--hide');
+          }
+          function hideLoader(loader){
+            loader.classList.remove('loader--show')
+            loader.classList.add('loader--hide');
+          }
+      </script>
+
+      <!-- <script src="dist/jquery.min.js"></script> -->
+      <script src="js/main.js"></script>
+</body>
+</html>
