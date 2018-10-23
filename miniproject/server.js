@@ -36,6 +36,7 @@ app.get('/people', (req, res) => {
         people.map(product => {
             return ` <h2> 
          ${product.name}
+         ${product.surname}
          </h2>`
 
         }).join(' ')
@@ -55,17 +56,33 @@ app.get('/manqanebi', (req, res) => {
 
 
 
-app.get('/searchName/', (req, res) => {
+app.get('/searchName', (req, res) => {
     const name = req.query.searchName;
     const human = people.find(prod => prod.name == name);
     if (human === undefined) {
-        return;
+        return
     }
     res.send(
-
-        `<h2>${human.name} , ${human.surname} , ${human.fatherName} , ${human.personalNumber}, ${human.id} </h2>`
+        `<h2>
+          Name: ${human.name} <br>
+          Surname: ${human.surname} <br>
+          Father Name: ${human.fatherName} <br>
+          Personal Number: ${human.personalNumber} <br>
+          Unique Id: ${human.id} <br>
+          Users Cars Manufacter: ${function findObjectByKey(human, key, value) {
+            for (var i = 0; i < array.length; i++) {
+                if (array[i][key] === value) {
+                    return array[i];
+                }
+            }
+            return null;
+        }}
+          
+          </h2>`
     )
 })
+
+
 
 app.get('/searchPersonal', (req, res) => {
     const personalNumber = req.query.searchPersonal;
@@ -77,20 +94,28 @@ app.get('/searchPersonal', (req, res) => {
 })
 
 
-app.post('/save/', (req, res) => {
+app.post('/save', (req, res) => {
+  
     let newhuman = {
         name: req.body.name,
         surname: req.body.surname,
         personalNumber: req.body.personalNumber,
         fatherName: req.body.fatherName,
         bday: req.body.bday,
-        id: id++
+        id: ++id,
+        cars: [],
     }
 
     people.push(newhuman)
     res.render('view', {
-
-    })
+        name: req.body.name,
+        surname: req.body.surname,
+        personalNumber: req.body.personalNumber,
+        fatherName: req.body.fatherName,
+        bday: req.body.bday,
+        information: req.body,
+ })
+    
 })
 
 app.post('/savecar', (req, res) => {
@@ -99,15 +124,55 @@ app.post('/savecar', (req, res) => {
         model: req.body.model,
         vin: req.body.vin,
         number: req.body.number,
-        color: req.body.color
+        color: req.body.color,
+        owner: req.body.owner,
     };
+    let user = people.find(p => p.name == req.body.owner);
+    console.log(user.cars);
+    user.cars.push(newcar);
+    
     cars.push(newcar)
     res.render('view', {
-        message: 'has been added'
+        message: 'Car has been added'
     })
 })
 
-// app.post('/')
+app.post('/searchEdit', (req,res) =>{
+
+    let name = req.body.searchText;
+    console.log(name);
+    const human = people.find(prod => prod.name == name);
+    console.log(human);
+
+    res.render('edit', {
+        title:' Edit Page',
+        name: human.name,
+        surname: human.surname,
+        personalNumber: human.personalNumber,
+        id: human.id
+    })
+  
+})
+
+app.post('/edit', (req,res) =>{
+    console.log(id); 
+    const human = people.find(something => something.id === Number(id));
+   
+    // console.log(human.name);
+    // const human = people.find(c => c.name == first);
+    // console.log(human);
+    // console.log(human.id);
+    // console.log(human);
+    // console.log(req.body.surname);
+    // const name = req.body.name;  
+    // console.log(`Name is ${name}`);
+    human.name = req.body.name
+    human.surname = req.body.surname
+
+   
+})
+
+
 
 app.listen(port, () => {
     console.log(`Loading .... ${port}`)

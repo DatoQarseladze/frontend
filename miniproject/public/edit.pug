@@ -1,0 +1,21 @@
+doctype
+head
+    meta(chartset='utf-8')
+    title= title
+body(style={background: '#fff'})
+    hr
+    #wrapper
+    a(href="/")= 'Get Back'
+    form(action='edit', method='POST')
+            h3='Name : '
+                input(type="text"  value= name name='name')
+            h3='Surname : '
+                input(type="text" value=surname name='surname')
+            h3='Personal Number : '
+                input(type='number'  value=personalNumber name='personalNumber')
+            h3='Fathers Name : '
+                input(type="text", name='fatherName')
+            h3='Birthday Date : '
+                input(type="date" name='bday')
+            button(type='submit')='Edit'
+

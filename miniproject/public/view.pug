@@ -2,8 +2,13 @@ doctype
 head
     meta(chartset='utf-8')
     title= title
+    style(type='text/css').
+        input {
+            display: flex
+        }
 body(style={display:'grid', 'grid-template-columns':'1fr 1fr',background: '#fff'})
-    #wrapper(style={'background-color':'red'})
+
+    #wrapper(style={'background-color':'gray'})
         form( action="/save", method='POST')
             h3='Name : '
                 input(type="text" value='name' name='name', required)
@@ -16,6 +21,8 @@ body(style={display:'grid', 'grid-template-columns':'1fr 1fr',background: '#fff'
             h3='Birthday Date : '
                 input(type="date" name='bday', )
             button(type='submit')='Submit'
+
+            
     #car(style={'background-color': 'gray'})
         form(action="/savecar", method='POST')
             h3 Manufacterer: 
@@ -28,10 +35,12 @@ body(style={display:'grid', 'grid-template-columns':'1fr 1fr',background: '#fff'
                 input(type="text", name='number', required)
             h3 Color:
                 input(type='text', name='color')
+            h3 Owner Name:
+                input(type="text" name='owner' required)
                 button(type='submit')='Add Car' 
-                h1= message
+
     #search
-        form(action='/searchName/', method='GET')
+        form(action='/searchName', method='GET')
             h3='Search User By Name: '
                 input(type="text" name='searchName')
                 button(type='submit')='Search'
@@ -40,6 +49,18 @@ body(style={display:'grid', 'grid-template-columns':'1fr 1fr',background: '#fff'
                 input(type='number', name='searchPersonal')
                 button(type='submit')='Search'
 
+
+
+    #edit(style={'background-color':'seagreen'})
+        form(action='searchEdit', method='POST')
+            h3= 'Search user by name for update'
+                input(type="text" name='searchText')
+                button(type='submit')='Search'
+     
+
+        
+       
+           
     //-  a(href="/")='Go Back'
     //-         <br>
     //-             a(href="/searchPage")='Search Page'

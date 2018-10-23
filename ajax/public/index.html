@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+        <div>
+                <input list="brands">
+                <datalist id="brands">
+                    <option value="VW">
+                    <option value="Audi">
+                    <option value="Skoda">
+                    <option value="BMW">
+                    <option value="Mercedes Benz">
+                </datalist>
+            </div>
+            <br>
+            <div>
+                <label>
+                    Number 1: <input type="number" id="num_1">
+                </label>
+            </div>
+            <br>
+            <div>
+                <label>
+                    Number 2: <input type="number" id="num_2">
+                </label>
+            </div>
+            <br>
+            <div>
+                <label>
+                    Country Name: <input type="text" id="countryName" list="countries" data-minLength="1">
+                </label>
+                <datalist id="countries">
+        
+                </datalist>    
+            </div>
+            <br>
+            <div>
+                <button type="button" id="addBtn">+</button>
+            </div>
+            <br>
+            <div class="lds-spinner loader--hide" id="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <span id="result"></span>
+        
+            <script src="dist/jquery.min.js"></script>
+            <script src="js/main.js"></script>
+</body>
+</html>
