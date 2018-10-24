@@ -41,8 +41,11 @@ body(style={display:'grid', 'grid-template-columns':'1fr 1fr',background: '#fff'
 
     #search
         form(action='/searchName', method='GET')
-            h3='Search User By Name: '
-                input(type="text" name='searchName')
+            h3='Search User'
+                h3='Name'
+                    input(type="text" name='searchName')
+                //- h3='Surname'
+                //-     input(type='text' name='searchSurname')
                 button(type='submit')='Search'
         form(action='/searchPersonal', method='GET')
             h3='Search User By Personal : '

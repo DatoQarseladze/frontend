@@ -10,11 +10,7 @@ html
     <br>
     a(href="/")='Main page'
     <br>
-     form(action='/searchPersonal', method='GET')
-        h3='Search User By Personal : '
-            input(type='number', name='searchPersonal')
-            button(type='submit')='Search'
-     form(action='/searchName/', method='GET')
-        h3='Search User By Name : '
-            input(type="text" name='searchName')
-            button(type='submit')='Search'
+    h1= name 
+    h1= surname 
+    each car in cars
+        h2= car.manufacter

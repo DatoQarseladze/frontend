@@ -27,7 +27,7 @@ app.get('/cars', (req, res) => {
 
 app.get('/searchPage', (req, res) => {
     res.render('search.pug', {
-
+            
     })
 })
 
@@ -62,24 +62,20 @@ app.get('/searchName', (req, res) => {
     if (human === undefined) {
         return
     }
-    res.send(
-        `<h2>
-          Name: ${human.name} <br>
-          Surname: ${human.surname} <br>
-          Father Name: ${human.fatherName} <br>
-          Personal Number: ${human.personalNumber} <br>
-          Unique Id: ${human.id} <br>
-          Users Cars Manufacter: ${function findObjectByKey(human, key, value) {
-            for (var i = 0; i < array.length; i++) {
-                if (array[i][key] === value) {
-                    return array[i];
-                }
-            }
-            return null;
-        }}
+
+
+    res.render('search', human)
+    // res.send(
+    //     `<h2>
+    //       Name: ${human.name} <br>
+    //       Surname: ${human.surname} <br>
+    //       Father Name: ${human.fatherName} <br>
+    //       Personal Number: ${human.personalNumber} <br>
+    //       Unique Id: ${human.id} <br>
+    //       Users Cars Manufacter: ${human.cars[0].vin}
           
-          </h2>`
-    )
+    //       </h2>`
+    // )
 })
 
 
@@ -128,13 +124,14 @@ app.post('/savecar', (req, res) => {
         owner: req.body.owner,
     };
     let user = people.find(p => p.name == req.body.owner);
-    console.log(user.cars);
+    
     user.cars.push(newcar);
     
     cars.push(newcar)
     res.render('view', {
         message: 'Car has been added'
     })
+    console.log(user.cars);
 })
 
 app.post('/searchEdit', (req,res) =>{

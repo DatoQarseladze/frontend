@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type='text/babel'>
+        const reactKey = (Symbol && Symbol.for('react.element')) || 0xeac7;
+
+        const reactElement = {
+            $$typeof : reactKey,
+            ref: null,
+            type: 'h1',
+            props: {
+                children: 'Hello World, React',
+                className: 'super_class',
+                style: {
+                    textAlign: 'center',
+                    color: 'darksalmon',
+                    
+                },
+                onClick: function(reactEventObject){
+                alert('Hello React');
+            }
+            }
+           
+        }
+
+        const reactElement2 = {
+            $$typeof: reactKey,
+            ref: null,
+            type: 'p',
+            props: {
+                children: 'Paragraph demo',
+            }
+        }
+
+        const reactElement3 = React.createElement('h1', {
+            className: 'demo_class',
+            style: {
+                textAlign:'center',
+                color: 'darksalmon'
+            },
+            onClick: function(reactEventObject){
+                alert('hello React')
+            }
+        },  'React.createElement()')
+
+
+        const jsxElement = (
+            <h1 
+            className='jsx__class'
+            style={{textAlign: 'center', color:'seagreen'}}
+            onClick={function(){ alert('JSX  Demo')}}>
+            Hello<span style={{color:'#444'}}> JSX</span></h1>)
+
+        
+        const propertiesExample = {
+            className: 'container demo_class',
+            onClick: () => alert(' propertiesExample alert')
+        }
+        
+        const nestElement = <h3>Nested Element h3</h3>
+
+        
+        const multElements = (
+            <div {...propertiesExample}>
+                <h1>Hello Page</h1>
+                <h2>Page Description</h2>
+                {nestElement}
+                {superComponent()}
+                {superComponent2()}
+                {superComponent3()}
+            </div>
+        )
+        
+        function superComponent() {
+            const info = 'supperComponent Info';
+            return (
+                <div>
+                    <h1>Hello </h1>
+                    <h2>{info}</h2>
+                </div>
+            )
+        }
+
+        function superComponent2() {
+            const info = 'supercomponent Info'
+            return [<h1 key='hello'>Hello</h1>, <h2 key='info'>{info}</h2>]
+        }
+    
+        function superComponent3() {
+            const info = 'supercoment info'
+            return (
+                <React.fragment>
+                <h1> Hello</h1>
+                <h2>{info}</h2>
+
+                </React.fragment>
+            )
+        }
+        const App = document.getElementById('app');
+        // ReactDOM.render(jsxElement, App);
+        ReactDOM.render(multElements, App);
+        // ReactDOM.render(reactElement3, App);
+        
+        
+
+    </script>
+</body>
+</html>
