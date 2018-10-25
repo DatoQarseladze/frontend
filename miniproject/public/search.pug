@@ -10,7 +10,13 @@ html
     <br>
     a(href="/")='Main page'
     <br>
-    h1= name 
-    h1= surname 
-    each car in cars
-        h2= car.manufacter
+    form(action="/delete", method='POST')
+        h3='Name'
+            input(type="text"  value= name name='name')
+        h3='Surname'
+            input(type="text" value=surname name='surname')
+        h3='Personal Number'
+            input(type='number'  value=personalNumber name='personalNumber')
+        each car in cars
+            h2= car.manufacter
+        button(type='submit')='Delete'

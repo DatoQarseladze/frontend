@@ -11,9 +11,9 @@ body(style={display:'grid', 'grid-template-columns':'1fr 1fr',background: '#fff'
     #wrapper(style={'background-color':'gray'})
         form( action="/save", method='POST')
             h3='Name : '
-                input(type="text" value='name' name='name', required)
+                input(type="text" name='name', required)
             h3='Surname : '
-                input(type="text" value='surname' name='surname', required)
+                input(type="text" name='surname', required)
             h3='Personal Number : '
                 input(type='number'  name='personalNumber', required)
             h3='Fathers Name : '
@@ -44,8 +44,8 @@ body(style={display:'grid', 'grid-template-columns':'1fr 1fr',background: '#fff'
             h3='Search User'
                 h3='Name'
                     input(type="text" name='searchName')
-                //- h3='Surname'
-                //-     input(type='text' name='searchSurname')
+                h3='Surname'
+                    input(type='text' name='searchSurname')
                 button(type='submit')='Search'
         form(action='/searchPersonal', method='GET')
             h3='Search User By Personal : '
@@ -59,17 +59,3 @@ body(style={display:'grid', 'grid-template-columns':'1fr 1fr',background: '#fff'
             h3= 'Search user by name for update'
                 input(type="text" name='searchText')
                 button(type='submit')='Search'
-     
-
-        
-       
-           
-    //-  a(href="/")='Go Back'
-    //-         <br>
-    //-             a(href="/searchPage")='Search Page'
-
-            //-  a(href="/cars")='Go to add Cars'
-            //- <br>
-            //- a(href="/searchPage")='Search Page'
-            //- <br>
-            //- a(href='/people')='People'

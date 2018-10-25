@@ -11,7 +11,7 @@ app.set('view engine', 'pug');
 
 let people = [];
 let cars = [];
-let id = 0;
+let id = -1;
 
 app.get('/', (req, res) => {
     res.render('view', {
@@ -58,24 +58,23 @@ app.get('/manqanebi', (req, res) => {
 
 app.get('/searchName', (req, res) => {
     const name = req.query.searchName;
+    const surname = req.query.searchSurname
     const human = people.find(prod => prod.name == name);
-    if (human === undefined) {
+    if(human === undefined){
         return
     }
-
-
-    res.render('search', human)
-    // res.send(
-    //     `<h2>
-    //       Name: ${human.name} <br>
-    //       Surname: ${human.surname} <br>
-    //       Father Name: ${human.fatherName} <br>
-    //       Personal Number: ${human.personalNumber} <br>
-    //       Unique Id: ${human.id} <br>
-    //       Users Cars Manufacter: ${human.cars[0].vin}
-          
-    //       </h2>`
-    // )
+    if(human.surname == surname){
+        res.render('search', human)
+    }else{
+    const human = people.find(prod => prod.surname == surname)
+        if (human === undefined) {
+            return
+        }
+        else if(name == human.name){
+            res.render('search', human)
+           }
+    }
+    res.render('search', human )
 })
 
 
@@ -84,9 +83,7 @@ app.get('/searchPersonal', (req, res) => {
     const personalNumber = req.query.searchPersonal;
     const human = people.find(prod => prod.personalNumber == personalNumber);
 
-    res.send(
-        `<h2>${human.name} , ${human.surname} , ${human.fatherName} , ${human.personalNumber}  </h2>`
-    )
+    res.render('search', human)
 })
 
 
@@ -103,13 +100,7 @@ app.post('/save', (req, res) => {
     }
 
     people.push(newhuman)
-    res.render('view', {
-        name: req.body.name,
-        surname: req.body.surname,
-        personalNumber: req.body.personalNumber,
-        fatherName: req.body.fatherName,
-        bday: req.body.bday,
-        information: req.body,
+    res.render('view', {   
  })
     
 })
@@ -138,9 +129,12 @@ app.post('/searchEdit', (req,res) =>{
 
     let name = req.body.searchText;
     console.log(name);
+    
     const human = people.find(prod => prod.name == name);
     console.log(human);
-
+    if(human === undefined){
+        return
+    }
     res.render('edit', {
         title:' Edit Page',
         name: human.name,
@@ -154,22 +148,22 @@ app.post('/searchEdit', (req,res) =>{
 app.post('/edit', (req,res) =>{
     console.log(id); 
     const human = people.find(something => something.id === Number(id));
-   
-    // console.log(human.name);
-    // const human = people.find(c => c.name == first);
-    // console.log(human);
-    // console.log(human.id);
-    // console.log(human);
-    // console.log(req.body.surname);
-    // const name = req.body.name;  
-    // console.log(`Name is ${name}`);
     human.name = req.body.name
     human.surname = req.body.surname
-
+    human.personalNumber = req.body.personalNumber
+    console.log(human.fatherName);
+    human.fatherName = req.body.fatherName
+    res.render('view', )
+    
    
 })
 
+app.post('/delete', (req,res) =>{
+  console.log(id);
+  people.splice(id, 1)
+  res.render('view')
 
+})
 
 app.listen(port, () => {
     console.log(`Loading .... ${port}`)
