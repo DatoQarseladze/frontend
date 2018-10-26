@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React </title>
+    <script src="https://unpkg.com/react@16.4.0/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16.4.0/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <style>
+    .box{
+        border: 3px solid black;
+        padding: 15px;
+        background: gray;
+        margin-bottom: 20px;
+    }
+    .default {
+        border: 2px solid black;
+        padding: 15px;
+        background: orange;
+    }
+    .VW{
+        background: seagreen;
+    }
+    </style>
+</head>
+<body>
+    <div id='root'></div>
+    <script type='text/babel'>
+    function ComponentDemo(params){
+        let info = ' Super Code';
+        return ( 
+            <React.Fragment>
+                <h1>Hello React</h1>
+                <h2>Hello {info} </h2>
+            </React.Fragment>
+        )
+    }
+
+    let element = <ComponentDemo/>
+
+    function Demo(props) {
+        let info = 'Demo Component';
+        return (
+            <div className={props.demoClass}>
+            <h1> Hello Box </h1>
+            <h2> Hello {info} </h2>       
+            </div>
+        )
+    }
+    Demo.defaultProps = {
+        demoClass: 'default',
+        data: 'Default data'
+    }
+
+    let destruct = {
+        demoClass: 'box',
+        data: 'data for component'
+    }
+
+
+    function Car(props){
+        return(
+            <div className={props.className}>
+            <h1>Make - {props.make}</h1>
+            <h2>Year - {props.year}</h2>
+            </div>
+        )
+    }
+
+    Car.PropTypes = {
+        make: PropTypes.string,
+        year: PropTypes.number,
+        className: PropTypes.string.isRequired
+    }
+
+    const cars = [
+        {make: 'VW', year: 2018, className:'box VW'},
+        {make:'Audi', year: 2019, className:'box'},
+        {make: 'Skoda', year: 2017, className:'box'},
+        {make: 'Range Rover', year: 2018, className: 'box'}
+    ]
+
+
+
+    let carsDOM = cars.map( (car, index) => {
+        return (
+            <Car 
+            className={car.className}
+            make={car.make}
+            year={car.year}
+            key={index}
+            />
+        )
+    })
+
+    let App = <div>{carsDOM}</div>
+
+    ReactDOM.render(App, document.getElementById('root'));
+    </script>
+</body>
+</html>

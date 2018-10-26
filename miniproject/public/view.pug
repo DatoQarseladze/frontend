@@ -2,60 +2,82 @@ doctype
 head
     meta(chartset='utf-8')
     title= title
-    style(type='text/css').
-        input {
-            display: flex
+    style.
+        body{
+            background: seagreen;        }
+        
+        input{
+            display: flex;
         }
-body(style={display:'grid', 'grid-template-columns':'1fr 1fr',background: '#fff'})
-
-    #wrapper(style={'background-color':'gray'})
+         
+        #wrapper{
+            display : flex;
+            justify-content : center;
+        }
+       
+        #img img{
+            border-radius : 50%;   
+            display: block;
+           margin: auto;       
+        }
+        input {
+            margin-top: 20px;
+            width: 320px;
+            height: 50px;
+            text-align: center;
+        }
+        button{
+            display: block;
+            margin: auto;
+        }
+body
+    #img
+        img(src="download.png", alt="")
+    #wrapper
         form( action="/save", method='POST')
-            h3='Name : '
-                input(type="text" name='name', required)
-            h3='Surname : '
-                input(type="text" name='surname', required)
-            h3='Personal Number : '
-                input(type='number'  name='personalNumber', required)
-            h3='Fathers Name : '
-                input(type="text", name='fatherName', )
-            h3='Birthday Date : '
-                input(type="date" name='bday', )
+            input(type="text" name='name', required placeholder='name')
+            input(type="text" name='surname', required placeholder='surname')
+            input(type='number'  name='personalNumber', required placeholder='ID')
+            input(type="text", name='fatherName', placeholder= 'Father Name')
+            input(type="date" name='bday', placeholder='BD' )
             button(type='submit')='Submit'
+            
 
             
-    #car(style={'background-color': 'gray'})
-        form(action="/savecar", method='POST')
-            h3 Manufacterer: 
-                input(type="text", name='manufacter')
-            h3 Model: 
-                input(type="text", name='model')
-            h3 Vin Code:
-                input(type="text", name='vin', required)
-            h3 State Number:
-                input(type="text", name='number', required)
-            h3 Color:
-                input(type='text', name='color')
-            h3 Owner Name:
-                input(type="text" name='owner' required)
-                button(type='submit')='Add Car' 
+    //- #car(style={'background-color': 'gray'})
+    //-     form(action="/savecar", method='POST')
+    //-         h3 Manufacterer: 
+    //-             input(type="text", name='manufacter')
+    //-         h3 Model: 
+    //-             input(type="text", name='model')
+    //-         h3 Vin Code:
+    //-             input(type="text", name='vin', required)
+    //-         h3 State Number:
+    //-             input(type="text", name='number', required)
+    //-         h3 Color:
+    //-             input(type='text', name='color')
+    //-         h3 Owner Name:
+    //-             input(type="text" name='owner' required)
+    //-             //- input(type="text" name='')
+    //-             button(type='submit')='Add Car' 
 
-    #search
-        form(action='/searchName', method='GET')
-            h3='Search User'
-                h3='Name'
-                    input(type="text" name='searchName' required)
-                h3='Surname'
-                    input(type='text' name='searchSurname' required)
-                button(type='submit')='Search'
-        form(action='/searchPersonal', method='GET')
-            h3='Search User By Personal : '
-                input(type='number', name='searchPersonal')
-                button(type='submit')='Search'
+    //- #search
+    //-     form(action='/searchName', method='GET')
+    //-         h3='Search User'
+    //-             h3='Name'
+    //-                 input(type="text" name='searchName' required)
+    //-             h3='Surname'
+    //-                 input(type='text' name='searchSurname' required)
+    //-             button(type='submit')='Search'
+    //-     form(action='/searchPersonal', method='GET')
+    //-         h3='Search User By Personal : '
+    //-             input(type='number', name='searchPersonal')
+    //-             button(type='submit')='Search'
 
 
 
-    #edit(style={'background-color':'seagreen'})
-        form(action='searchEdit', method='POST')
-            h3= 'Search user by name for update'
-                input(type="text" name='searchText')
-                button(type='submit')='Search'
+    //- #edit(style={'background-color':'seagreen'})
+    //-     form(action='searchEdit', method='POST')
+    //-         h3= 'Search user by name for update'
+    //-             input(type="text" name='searchText')
+    //-             button(type='submit')='Search'

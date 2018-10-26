@@ -6,6 +6,8 @@ const cookieParser = require('cookie-parser')
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('./images'));
+app.use( express.static( './public' ) )
 app.set('views', './public')
 app.set('view engine', 'pug');
 
@@ -15,7 +17,7 @@ let id = -1;
 
 app.get('/', (req, res) => {
     res.render('view', {
-
+        title: 'Main Page'
     })
 })
 
@@ -32,6 +34,8 @@ app.get('/searchPage', (req, res) => {
 })
 
 app.get('/people', (req, res) => {
+
+
     res.send(
         people.map(product => {
             return ` <h2> 
@@ -41,6 +45,8 @@ app.get('/people', (req, res) => {
 
         }).join(' ')
     )
+
+    // res.render
 })
 
 app.get('/manqanebi', (req, res) => {
@@ -115,6 +121,7 @@ app.post('/savecar', (req, res) => {
         owner: req.body.owner,
     };
     let user = people.find(p => p.name == req.body.owner);
+
     
     user.cars.push(newcar);
     
