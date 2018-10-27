@@ -14,7 +14,6 @@ app.set('view engine', 'pug');
 let people = [];
 let cars = [];
 let id = -1;
-let disabled = false;
 
 app.get('/', (req, res) => {
     res.render('view', {
@@ -121,10 +120,32 @@ app.post('/savecar', (req, res) => {
         color: req.body.color,
         owner: req.body.owner,
     };
-    let user = people.find(p => p.name == req.body.owner);
-
     
-    user.cars.push(newcar);
+    let surname = req.body.ownerSurname
+    let name = req.body.owner
+    const human = people.find(prod => prod.name == name);
+    if(human === undefined){
+        return
+    }
+    if(human.surname == surname){
+        res.render('view', human)
+    }else{
+    const human = people.find(prod => prod.surname == surname)
+        if (human === undefined) {
+            return
+        }
+        else if(name == human.name){
+            res.render('view', {
+                title:' Edit Page',
+                name: human.name,
+                surname: human.surname,
+                personalNumber: human.personalNumber,
+                id: human.id
+            })
+           }
+    }
+
+    human.cars.push(newcar);
     
     cars.push(newcar)
     res.render('view', {
