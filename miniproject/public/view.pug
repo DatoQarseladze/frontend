@@ -3,6 +3,7 @@ head
     meta(chartset='utf-8')
     title= title
     style.
+    
         body{
             background: seagreen;        }
         
@@ -18,7 +19,7 @@ head
         #img img{
             border-radius : 50%;   
             display: block;
-           margin: auto;       
+            margin: auto;       
         }
         input {
             margin-top: 20px;
@@ -28,8 +29,24 @@ head
         }
         button{
             display: block;
-            margin: auto;
+            border: 0;
+            width: 270px;
+            padding: 10px;
+            margin: 20px auto;
+            color: #FFF;
+            background: #8bbc37
         }
+        #content{
+            display:flex;
+            justify-content: space-around;
+        }
+        #allpeople a{
+            display: flex;
+            justify-content: center;
+       
+        }
+    
+      
 body
     #img
         img(src="download.png", alt="")
@@ -40,44 +57,15 @@ body
             input(type='number'  name='personalNumber', required placeholder='ID')
             input(type="text", name='fatherName', placeholder= 'Father Name')
             input(type="date" name='bday', placeholder='BD' )
-            button(type='submit')='Submit'
+            button(type='submit')= 'Add'
             
+    #content
+        #car 
+            a(style={'color': '#fff', 'text-decoration':'none', 'font-size':'20px'})(href="/car")= 'Add Car'
+    
+        #search
+            a(style={'color': '#fff', 'text-decoration':'none', 'font-size':'20px'})(href="/search")= 'Search People'
+   
 
-            
-    //- #car(style={'background-color': 'gray'})
-    //-     form(action="/savecar", method='POST')
-    //-         h3 Manufacterer: 
-    //-             input(type="text", name='manufacter')
-    //-         h3 Model: 
-    //-             input(type="text", name='model')
-    //-         h3 Vin Code:
-    //-             input(type="text", name='vin', required)
-    //-         h3 State Number:
-    //-             input(type="text", name='number', required)
-    //-         h3 Color:
-    //-             input(type='text', name='color')
-    //-         h3 Owner Name:
-    //-             input(type="text" name='owner' required)
-    //-             //- input(type="text" name='')
-    //-             button(type='submit')='Add Car' 
-
-    //- #search
-    //-     form(action='/searchName', method='GET')
-    //-         h3='Search User'
-    //-             h3='Name'
-    //-                 input(type="text" name='searchName' required)
-    //-             h3='Surname'
-    //-                 input(type='text' name='searchSurname' required)
-    //-             button(type='submit')='Search'
-    //-     form(action='/searchPersonal', method='GET')
-    //-         h3='Search User By Personal : '
-    //-             input(type='number', name='searchPersonal')
-    //-             button(type='submit')='Search'
-
-
-
-    //- #edit(style={'background-color':'seagreen'})
-    //-     form(action='searchEdit', method='POST')
-    //-         h3= 'Search user by name for update'
-    //-             input(type="text" name='searchText')
-    //-             button(type='submit')='Search'
+    #allpeople
+            a(style={'color': '#fff', 'text-decoration':'none', 'font-size':'30px'})(href="/people")= 'Database'

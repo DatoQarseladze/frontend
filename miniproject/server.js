@@ -14,6 +14,7 @@ app.set('view engine', 'pug');
 let people = [];
 let cars = [];
 let id = -1;
+let disabled = false;
 
 app.get('/', (req, res) => {
     res.render('view', {
@@ -34,33 +35,25 @@ app.get('/searchPage', (req, res) => {
 })
 
 app.get('/people', (req, res) => {
+    res.render('people', {
+        people:people
+    })
 
-
-    res.send(
-        people.map(product => {
-            return ` <h2> 
-         ${product.name}
-         ${product.surname}
-         </h2>`
-
-        }).join(' ')
-    )
-
-    // res.render
-})
-
-app.get('/manqanebi', (req, res) => {
-    res.send(
-        cars.map(product => {
-            return ` <h2> 
-         ${product.model}
-         </h2>`
-
-        }).join(' ')
-    )
+    
 })
 
 
+app.get('/car', (req,res) =>{
+    res.render('car', {
+        title: 'Car Page'
+    })
+})
+
+app.get('/search', (req,res) =>{
+    res.render('searchpug', {
+        title: 'Search Section'
+    })
+})
 
 app.get('/searchName', (req, res) => {
     const name = req.query.searchName;
@@ -68,6 +61,9 @@ app.get('/searchName', (req, res) => {
     const human = people.find(prod => prod.name == name);
     if(human === undefined){
         return
+    }
+    if(human.disable === true){
+        res.render('view');
     }
     if(human.surname == surname){
         res.render('search', human)
@@ -80,16 +76,19 @@ app.get('/searchName', (req, res) => {
             res.render('search', human)
            }
     }
-    res.render('search', human )
+    res.render('search', human, {
+        title: 'Result Page'
+    } )
 })
 
-
-
 app.get('/searchPersonal', (req, res) => {
-    const personalNumber = req.query.searchPersonal;
-    const human = people.find(prod => prod.personalNumber == personalNumber);
-
-    res.render('search', human)
+    const personalNumber = req.query.searchPersonalNumber;
+    console.log(personalNumber);
+    const human = people.find(prod => Number(prod.personalNumber) == Number(personalNumber));
+    console.log(human);
+    res.render('personalId', human, {
+        title: 'Result Page'
+    })
 })
 
 
@@ -103,6 +102,8 @@ app.post('/save', (req, res) => {
         bday: req.body.bday,
         id: ++id,
         cars: [],
+        disable: false,
+
     }
 
     people.push(newhuman)
@@ -135,13 +136,33 @@ app.post('/savecar', (req, res) => {
 app.post('/searchEdit', (req,res) =>{
 
     let name = req.body.searchText;
-    console.log(name);
+    let surname = req.body.searchTextSurname
     
     const human = people.find(prod => prod.name == name);
-    console.log(human);
     if(human === undefined){
         return
     }
+    if(human.disable === true){
+        res.render('view');
+    }
+    if(human.surname == surname){
+        res.render('edit', human)
+    }else{
+    const human = people.find(prod => prod.surname == surname)
+        if (human === undefined) {
+            return
+        }
+        else if(name == human.name){
+            res.render('edit', {
+                title:' Edit Page',
+                name: human.name,
+                surname: human.surname,
+                personalNumber: human.personalNumber,
+                id: human.id
+            })
+           }
+    }
+
     res.render('edit', {
         title:' Edit Page',
         name: human.name,
@@ -170,6 +191,14 @@ app.post('/delete', (req,res) =>{
   people.splice(id, 1)
   res.render('view')
 
+})
+
+app.post('/disable', (req,res) =>{
+    console.log(id);
+    const human = people.find(something => something.id === Number(id));
+    human.disable = true;
+    console.log(human);
+    res.render('view');
 })
 
 app.listen(port, () => {
