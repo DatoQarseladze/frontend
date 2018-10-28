@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Class</title>
+    <script src="https://unpkg.com/react@16.4.0/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16.4.0/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/create-react-class@15.6.3/create-react-class.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+
+    
+</head>
+<body>
+    <div id="root"></div>
+    <script type='text/babel'>
+        const MyClassComponent = createReactClass({
+            propTypes: {
+                color: PropTypes.string
+            },
+            getDefaultProps: function () {
+                return { color: 'green'}
+            },
+
+            getInitialState: function() {
+                return { times: 0 }
+            },
+            handleClick: function() {
+                this.setState((prevState, props) =>{ 
+                    return { times: prevState.times + 1}
+                })
+            },
+            render: function() {
+                const style = {color: this.props.color};
+                return (
+                    <span onClick={this.handleClick} style={style}>
+                        Clicked {this.state.times}
+                    </span>
+                )
+            }
+        }) 
+
+        const App = props =>{
+            return (
+                <div>
+
+                    <MyClassComponent color='darkblue '/>
+                    <br/>
+                    <MyClassComponent color='blue'/>
+                    <br/>
+                    <MyClassComponent/>
+                    
+                </div>
+            )
+        }
+
+      
+        const root = document.getElementById('root');
+        ReactDOM.render(<App/>, root)
+    </script>
+         
+</body>
+</html>
