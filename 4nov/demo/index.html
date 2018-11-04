@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let persons = [
+
+            {
+                name: 'Dato',
+                age: 23,
+                id: 1
+            },
+             {
+                 name: 'Hoi',
+                 age: 21,
+                 id: 2
+            },
+              {
+                  name:'Giorgi',
+                  age: 22,
+                  id: 3
+              }
+        ]
+
+        let personsHTML= persons.map( person => `<p>User - ${person.name}, Id- ${person.id}</p>`)
+        let personsFiltered = persons.filter( person => {
+            return person.age < 25
+        }).map( person => `<p>User - ${person.name}, Id- ${person.id}</p>`)
+        let personReduced = persons.reduce( (total,current) =>{
+            return total += `<p> User - ${current.name}, Id - ${current.id} </p>`
+        }, ' ')
+        
+        let numbers = [2,3,7,8]
+
+
+        // Array.prototype.customReduce = function(callbackFunc, initValue){
+        //  if( typeof initValue ==='undefined' ) return undefined;
+
+        // let result = initValue
+        
+        // for( let i = 0; i < this.length; i++){
+        //     result = callbackFunc(result, this[i]);
+        // }
+        // return result;
+        // }
+        // console.log( numbers.customReduce( (t,n) => t+n, 0));
+
+
+
+        Array.prototype.customReduce = function(callbackFunc, initValue){
+         let result = initValue;
+         for(let i =0; i< this.length; i++){
+             result = callbackFunc(result, this[i])
+         }
+         return result
+        }
+        console.log(numbers.customReduce((total,current) => {
+            return total += current
+        }, 0))
+
+
+        document.body.innerHTML = personsHTML.join(' ');
+        document.body.innerHTML += '<hr>'
+        document.body.innerHTML += personsFiltered.join(' ');
+        document.body.innerHTML += '<hr>'
+
+        document.body.innerHTML += personReduced
+        console.log(personReduced);
+    </script>
+</body>
+</html>

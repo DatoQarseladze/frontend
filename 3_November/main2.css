@@ -1,0 +1,57 @@
+body{
+    background-color:powderblue;
+}
+h1, h2{
+    text-align: center;
+}
+h2{
+    color:dimgray;
+}
+h3{
+    color:brown;
+    text-align:center;
+    font-weight:bold;
+}
+.align__right{
+    text-align:right;
+}
+/* background Props */
+.box{
+    width:300px;
+    height:300px;
+    border:3px dashed black;
+    background-color:rgb(221, 63, 95, .75);
+    background-image:url(./download.jpg);
+    background-size:25%;
+}
+
+body{
+    /* background-image:url(./download.jpg);
+    background-repeat:no-repeat; */
+    /* background-position:100px 200px; */
+    /* background-size:cover; */
+}
+
+/* Box Model :
+
+content = width, height
+padding,
+border,
+margin */
+.box_model{
+    background-color:aqua;
+    width:300px;
+    height:300px;
+    border:10px dashed black;
+    padding:20px;
+    border-left-style:double;
+    background-image:url(./download.jpg);
+    -webkit-background-clip:text;
+    background-clip:text;
+    font-size:27px;
+    font-weight:bolder;
+    color:transparent;
+    box-sizing:content-box;
+    background-origin:border-box;
+    background-repeat:no-repeat;
+}

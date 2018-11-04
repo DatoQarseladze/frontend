@@ -1,0 +1,28 @@
+*{
+    color:brown;
+}
+
+h2{
+    color:green;
+}
+li h2{
+    color:red;
+}
+
+li > h2{
+    color:blue;
+}
+
+#list__item{
+    color:cadetblue;
+    font-weight:bold;
+}
+
+.list__item{
+    font-size:36px;
+    color:yellowgreen;
+}
+span.list__item{
+    color:crimson;
+}
+
