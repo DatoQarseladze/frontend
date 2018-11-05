@@ -6,44 +6,22 @@ const FETCHURL = 'https://jsonplaceholder.typicode.com/users'
 class App extends Component {
   state = {
     jsonData: null,
+    loading: true
   }
 
   componentDidMount(){
     fetch(FETCHURL)
     .then(res => res.json())
-    .then( users => this.setState({jsonData:users}))
+    .then( users => this.setState({jsonData:users, loading: false}))
     .catch(err => console.log(err))
   }
   render() {
-    let persons = [
-
-      {
-          name: 'Dato',
-          age: 23,
-          id: 1,
-          isActive: true,
-      },
-       {
-           name: 'Hoi',
-           age: 21,
-           id: 2,
-          isActive: true,
-
-      },
-        {
-            name:'Giorgi',
-            age: 22,
-            id: 3,
-          isActive: false,
-
-        }
-  ]
+ 
   const showList = false;
-
-  // if(showList){
-  //   return null;
-  // }
-
+  const {users, loading} = this.state;
+  if(loading){
+    return <div>Loading....</div>
+  }
   return (
     <div className='App'>
     <h2>Using Array.prototype.map()</h2>
