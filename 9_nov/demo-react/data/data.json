@@ -1,18 +1,22 @@
 [
     {
         "name": "Demo Title",
-        "id": 0
+        "id": 0,
+        "done": true
     },
     {
         "name": "Lorem Ipsum",
-        "id": 1
+        "id": 1,
+        "done": true
     },
     {
         "name": "Dolar Slit Ament",
-        "id": 2
+        "id": 2,
+        "done": false
     },
     {
         "name": "Javascript ESM",
-        "id": 3
+        "id": 3,
+        "done": true
     }
 ]
