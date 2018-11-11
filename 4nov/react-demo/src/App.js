@@ -16,7 +16,29 @@ class App extends Component {
     .catch(err => console.log(err))
   }
   render() {
- 
+  //   let persons = [
+
+  //     {
+  //         name: 'Dato',
+  //         age: 23,
+  //         id: 1,
+  //         isActive: true,
+  //     },
+  //      {
+  //          name: 'Hoi',
+  //          age: 21,
+  //          id: 2,
+  //         isActive: true,
+
+  //     },
+  //       {
+  //           name:'Giorgi',
+  //           age: 22,
+  //           id: 3,
+  //         isActive: false,
+
+  //       }
+  // ]
   const showList = false;
   const {users, loading} = this.state;
   if(loading){
