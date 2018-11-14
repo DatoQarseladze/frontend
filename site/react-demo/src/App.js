@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Slide from '../src/components/Slide'
-import RightArrow from '../src/components/RightArrow'
-import LeftArrow from '../src/components/LeftArrow'
 
 export default class App extends Component {
   constructor(props) {
@@ -17,7 +14,7 @@ export default class App extends Component {
         "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/mountains.jpg",
         "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg",
         "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg"
+        // "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg"
       ],
       currentIndex: 0,
       translateValue: 0
@@ -25,7 +22,13 @@ export default class App extends Component {
   }
 
   goToPrevSlide = () => {
-    console.log('hello')
+    if(this.state.currentIndex === 0)
+      return;
+    
+    this.setState(prevState => ({
+      currentIndex: prevState.currentIndex - 1,
+      translateValue: prevState.translateValue + this.slideWidth()
+    }))
   }
 
   goToNextSlide = () => {
@@ -52,7 +55,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="slide">
+      <div className="slider">
 
         <div className="slider-wrapper"
           style={{
@@ -76,4 +79,33 @@ export default class App extends Component {
       </div>
     );
   }
+}
+
+
+const Slide = ({ image }) => {
+  const styles = {
+    backgroundImage: `url(${image})`,
+    backgroundSize: 'cover',
+    // backgroundRepeat: 'no-repeat',
+    // backgroundPosition: '80% 80%'
+  }
+  return <div className="slide" style={styles}></div>
+}
+
+
+const LeftArrow = (props) => {
+  return (
+    <div className="backArrow arrow" onClick={props.goToPrevSlide}>
+      <i className="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+    </div>
+  );
+}
+
+
+const RightArrow = (props) => {
+  return (
+    <div className="nextArrow arrow" onClick={props.goToNextSlide}>
+      <i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+    </div>
+  );
 }
