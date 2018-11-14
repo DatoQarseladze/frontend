@@ -32,17 +32,13 @@ export default class App extends Component {
   }
 
   goToNextSlide = () => {
-    // Exiting the method early if we are at the end of the images array.
-    // We also want to reset currentIndex and translateValue, so we return
-    // to the first image in the array.
     if(this.state.currentIndex === this.state.images.length - 1) {
       return this.setState({
         currentIndex: 0,
         translateValue: 0
       })
     }
-    
-    // This will not run if we met the if condition above
+
     this.setState(prevState => ({
       currentIndex: prevState.currentIndex + 1,
       translateValue: prevState.translateValue + -(this.slideWidth())
@@ -86,8 +82,8 @@ const Slide = ({ image }) => {
   const styles = {
     backgroundImage: `url(${image})`,
     backgroundSize: 'cover',
-    // backgroundRepeat: 'no-repeat',
-    // backgroundPosition: '80% 80%'
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: '80% 80%'
   }
   return <div className="slide" style={styles}></div>
 }
