@@ -374,7 +374,8 @@ margin-right: 50px;
 
 .popular-traveller:hover{ 
   cursor: pointer;
-  opacity: .4;
+  background: linear-gradient(rgb(0,0,0,0.5), rgb(0, 0, 0, 0.5));
+  transition: 2s;
   transform: scale(1.2);
 }
 .leftarrow{

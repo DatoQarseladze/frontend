@@ -1,3 +1,4 @@
+
 let travellers = [
     "<div class='popular-traveller'><div class='traveller-picture bidzina'></div><div class='traveller-name'>Bidzina Ivanishvili</div><div class='traveller-place'>Lives in Georgia</div><div class='traveller-info'><i class='fas fa-long-arrow-alt-right'></i></div></div>",
     "<div class='popular-traveller'><div class='traveller-picture mikho'></div><div class='traveller-name'>Mikheil Saakashvili</div><div class='traveller-place'>Lives in Georgia</div><div class='traveller-info'><i class='fas fa-long-arrow-alt-right'></i></div></div>",
@@ -12,7 +13,7 @@ class SlideShow {
         this.quantity = quantity;
     }
 
-    printSlide(){
+    print(){
         for(let i=0; i<this.quantity; i++) {
             document.getElementById(this.whereInserted).innerHTML += this.componentArray[i];
                 
@@ -23,14 +24,14 @@ class SlideShow {
         document.getElementById(this.whereInserted).innerHTML = '';
         let firstElement = this.componentArray.shift();
         this.componentArray.push(firstElement);
-        this.printSlide();
+        this.print();
     }
 }
 
 
 
 let travellerSlide = new SlideShow(travellers, 'popular-travellers-right', 3);
-travellerSlide.printSlide();
+travellerSlide.print();
 document.getElementById('popular-travellers-button').addEventListener('click', function() {
     travellerSlide.left()
 })
