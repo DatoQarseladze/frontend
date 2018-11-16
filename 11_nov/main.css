@@ -266,11 +266,11 @@ ul li a{
 }
 
 .image2{
-    width: 80%;
+    width: 1200px;
     margin: auto;
     margin-top: 200px;
     opacity: 0.5;
-    /* height: 1200px; */
+    height: 1200px;
 }
 footer{
 

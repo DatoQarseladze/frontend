@@ -5,11 +5,12 @@
 
 .slider {
   position: relative;
-  width: 500px;
+  width: 400px;
   margin: 0 auto;
-  height: 500px;
+  height: 400px;
   overflow: hidden;
   white-space: nowrap;
+  margin-bottom: 300px;
 }
 
 
@@ -21,7 +22,7 @@
 
 .slide {
   display: inline-block;
-  height: 100%;
+  height: 500px;
   width: 100%;
 }
 
@@ -82,10 +83,6 @@ ul li a{
 }
 
 
-.image{
-  /* opacity: 0.5; */
-}
-
 .wrapper{
   background-image: url('https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-size: cover;
@@ -112,7 +109,7 @@ ul li a{
   padding: 20px;
 }
 .navigate{
-  width: 80%;
+  width: 700px; 
   /* position: absolute; 
   top: 30px;
   left: 25%;
@@ -156,19 +153,15 @@ ul li a{
 }
 
 .mainButton{
-  /* display:block; */
-  /* margin: auto; */
   width: 120px;
   height: 40px;
   background: #fff;
   color: black;
   font-weight: 700;
-  /* position: absolute; */
-  /* top: 500px; */
-  /* left: 47%; */
   border-radius: 20px;
   margin: 150px auto 0px;
   display: block;
+  cursor: pointer;
 }
 
 .mainButton:hover{
@@ -184,25 +177,23 @@ ul li a{
   position: relative;
 }
 
-.gallery h1{
+.gallery-text{
+  width: 100px;
   color: gainsboro;
   font-size: 60px;
-  margin-left: 100px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-.countries{
- display: grid;
- grid-template-columns: repeat(3,1fr);
-  margin: auto;
-  width: 90%;
+  margin: 100px auto 50px ;
 }
 
+
+
+
 .tours{
-  margin-top: 30px;
+
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  margin: 180px auto 50px;
 }
+
 
 .tours img{
   max-width: 290px;
@@ -222,19 +213,29 @@ ul li a{
 
 .tours-price{
   position: absolute;
-  right:  15px;
-  bottom: 10px;
-  color: #fff;
-  font-size: 30px;
+  right:  0;
+  bottom: 0;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
   width: 50px;
-  height: 50px;
+  height: 30px;
+  background: #fff;
 }
+
+.fa-long-arrow-alt-right{
+  color: #4e5e7d;
+}
+
+.fa-star{
+  color: darkgoldenrod;
+}
+
 
 
 .tours-stars{
   display: flex;
-  /* grid-template-columns: repeat(2,1fr); */
-
   justify-content: space-around;
 }
 
@@ -243,6 +244,11 @@ ul li a{
   float: right;
 }
 
+
+
+.video{
+  margin-top: 50px;
+}
 
 .experts{
   padding-top: 150px;
@@ -259,8 +265,9 @@ ul li a{
 }
 .expert-h1{
   width: 350px;
-  font-size: 50px;
+  font-size: 40px;
   color: #4e5e7d;
+  font-weight: 500;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 
 }
@@ -281,57 +288,46 @@ ul li a{
   max-height: 20px;
 }
 
-.countries h1{
-  font-size: 25px;
-  font-family: 'Pacifico', sans-serif;
-  color: #fff;
-}
+.countries{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: auto;
+  width: 1200px;
+  }
+
 .countries img{
   min-height: 290px;
   max-width: 382px;
 
 }
 
-.scotland{
-  position: absolute;
-  top: 200px;
-  left: 110px;
-}
-.canada{
-  position: absolute;
-  top: 200px;
-  left: 490px;
-}
-.italy{
-  position: absolute;
-  top: 200px;
-  left: 880px;
-}
-.england{
-  position: absolute;
-  top: 470px;
-  left: 110px;
-}
-.iceland{
-  position: absolute;
-  top: 470px;
-  left: 490px;
-}
-.newzealand{
-  position: absolute;
-  top: 470px;
-  left: 840px;
+.countries-width {
+  position: relative;
 }
 
+.countries-description{
+  font-size: 28px;
+  font-family: 'Pacifico', sans-serif;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
 
+.zealand{
+
+  position: absolute;
+  top:50%;
+  left: 30%;
+}
 
 .line{
   background-color: #4e5e7d;
   height: 5px;
   width: 40px;
   position: absolute;
-  top: 20%;
-  left: 48%;
+  top: 15%;
+  left: 49%;
 }
 
 .subscribe{
@@ -340,20 +336,114 @@ ul li a{
   left: 40%;
 }
 
-.image2{
-  width: 80%;
-  margin: auto;
-  margin-top: 200px;
-  opacity: 0.5;
-  /* height: 1200px; */
-}
-footer{
+#popular-travellers-right{
 
-  /* margin-top: 50px; */
-  position: relative;
-  margin: auto;
-  height: 700px;
-  /* background-image: url('https://static1.squarespace.com/static/556f16d7e4b0eafb6eb48e02/5697a7aa5a566807bca4e1b5/57a092805016e13b82b0fc38/1470141072806/Everest_Ridge.png?format=1000w'); */
+display: flex;
+
+}
+
+
+.popular-travellers{
+  display: flex;
+  flex-direction: row;
+  margin: 150px 10% 50px;
+}
+
+.popular-traveller-line{
+  background: #4e5e7d;
+  width: 5%;
+  height: 3px;
+}
+
+.popular-traveller-title{
+  font-size: 30px;
+  width: 300px;
+  color: #4e5e7d;
+  font-weight: 700;  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.popular-traveller-description{
+  width: 40%;
+  margin-top: 10px;
+  color: #4e5e7d
+}
+
+.popular-traveller{
+margin-right: 50px;
+}
+
+.popular-traveller:hover{ 
+  cursor: pointer;
+  opacity: .4;
+  transform: scale(1.2);
+}
+.leftarrow{
+  margin-top: 10%;
+  margin-right: 20px;
+}
+
+
+
+.popular-button{
+  margin: 10px 40px 10px;
+  width: 100px;
+  display: block;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #54d7b7;
+  color: #fff;
+}
+
+#popular-traveller-button {
+  margin-right: -10px;
+  cursor: pointer;
+  color: #032057;
+}
+
+.traveller-picture {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bidzina_Ivanishvili_2013-07-19.jpg/220px-Bidzina_Ivanishvili_2013-07-19.jpg');
+  background-size: cover;
+  width: 130px;
+  height: 130px;
+  border: 10px solid #54d7b7;
+  border-radius: 130px;
+}
+
+
+.mikho {
+  background-image: url('https://i.ytimg.com/vi/pL9RVBZv37Y/maxresdefault.jpg');
+  background-size: cover;
+}
+
+.givi{
+  background-image: url('https://thumbs01.myvideo.ge/screens/287/2869857.jpg');
+  background-size: cover;
+}
+
+.targamadze{
+  background-image: url('  http://www.for.ge/main_p/For_Ge_Arts/givi_targamaze_980_8814_.jpg');
+  background-size: cover;
+}
+
+.traveller-name {
+  color: #032057;
+  font-size: 30px;
+  font-weight: bold;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.traveller-info {
+  background: #54d7b7;
+  width: 120px;
+  height: 30px;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-size: 30px;
+  margin-top: 20px;
+  box-shadow: 0px 2px 5px #54d7b7
 }
 
 footer h1{
@@ -379,10 +469,20 @@ footer h2{
 }
 
 
+footer{
+  background-image: url('https://static1.squarespace.com/static/556f16d7e4b0eafb6eb48e02/5697a7aa5a566807bca4e1b5/57a092805016e13b82b0fc38/1470141072806/Everest_Ridge.png?format=1000w');
+  background-size: cover;
+  position: relative;
+  width: 1200px;
+  height: 700px;
+  margin: 120px auto 50px;
+}
+
+
 input{
   position: absolute;
-  top: 350px;
-  left: 460px;
+  top: 38%;
+  left: 38%;
   width: 350px;
   padding: 12px 20px;
   margin: 8px 0;
@@ -397,8 +497,8 @@ input{
   border-radius: 50px;
   color: #fff;
   position: absolute;
-  top:358px;
-  left: 710px;
+  top: 39%;
+  left:  60%;
 
 }
 
@@ -406,9 +506,9 @@ input{
 .footbar{
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  position: absolute;
-  top: 390px;
-  left: 250px;
+  position: absolute; 
+  top: 60%;
+  left: 10%;
 }
 
 .section{
@@ -438,9 +538,9 @@ input{
   font-size: 25px;
   font-family: 'Pacifico', 'sans-serif'
 }
-.section-two p{
+.section-two-p{
   position: absolute;
-  top: 100px;
+  top: 80%;
   left: 450px;
   width: 100%;
 
@@ -452,6 +552,7 @@ input{
 
 .twitter{
   width: 30px;
+  margin-left: 40px;
 }
 .facebook{
   width: 28px;
@@ -460,8 +561,8 @@ input{
 .icons{
   width: 100%;
   position: absolute;
-  top: 110px;
-  left: 550px;
+  top: 80%;
+  left: 100%;
 }
 
 article{
@@ -470,10 +571,10 @@ article{
   justify-content: space-between;
 }
 
-.line2{
+.description-line{
   background-color: #4e5e7d;
   height: 3px;
-  width: 40px;
+  width: 10%;
   position: absolute;
   top: 10%;
   left: 20%;
@@ -539,14 +640,29 @@ width: 500px;
   margin-left: 20px;
 }
 
+
 .article-box{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    /* grid-template-columns: repeat(2,1fr); */
+    justify-content: space-around;
 }
+
+.slider{
+  width: 500px;
+  margin: 120px auto;
+}
+
+.slide{
+    margin-right: 30px;
+  }
+
 .description-button{
   width: 100px;
   margin-left: 20%;
   display: block;
+  margin: auto;
   height: 30px;
   border-radius: 30px;
   background-color: #54d7b7;

@@ -1,307 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+   
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Oswald"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:600"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <title>Travellers App</title>
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div class='wrapper'>   
-      <!-- <div class='image'>
-        <img src="alps.jpg" alt="">  
-      </div>  -->
-                   
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+   
+
+    <!-- TravellingApp Navigation start -->
+    <div class="wrapper">
       <header>
-          <nav class='navigate'>
-              <ul class='navigation'>
-                  <li><a href="#">Places</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Packages</a></li>
-                  <li><a href="#" class='logo'>TungoTravel</a></li>
-                  <li><a href="#">Gallery</a></li>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">Contact Us</a></li>
-              </ul>
-          </nav>  
+        <nav class="navigate">
+          <ul class="navigation">
+            <li><a href="#">Places</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Packages</a></li>
+            <li><a href="#" class="logo">TungoTravel</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
       </header>
-    
-      <div class='centered'>Travello</div>
-      <div class='centered2'>World Best Travel Agency</div>
-      <button class='mainButton'>Book Now</button>
-  </div>
- 
-  <div class='gallery'>
-      <h1>Gallery</h1>
-      <div class='countries'>
-          <div>
-              <img src="https://ccsa.cc/image/program_covers/Scotland/Snowy%20Peaks%20of%20Scotland.jpg" alt=""> 
-              <h1 class="scotland">Scotland</h1>    
-          </div>
-          <div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Victoria_Harbour%2C_Canada.jpg/800px-Victoria_Harbour%2C_Canada.jpg" alt=""> 
-              <h1 class="canada">Canada</h1>
-          </div>
-          <div>
-              <img src="http://www.witf.org/community/witf-events/Italy_600x338.jpg" alt="">
-              <h1 class="italy">Italy</h1>
-          </div>
-          <div>
-              <img src="https://i.huffpost.com/gen/1843222/thumbs/o-LAKE-GRASMERE-900.jpg?1" alt="">
-              <h1 class="england">England</h1>
-          </div>
-          <div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_southeastern_Iceland.jpg/800px-J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_southeastern_Iceland.jpg" alt="">
-              <h1 class="iceland">Iceland</h1>   
-          </div>
-          <div>
-              <img src="https://static.thousandwonders.net/New.Zealand.original.1909.jpg" alt="">
-              <h1 class="newzealand">New Zealand</h1>
-          </div>
-      </div>
-  </div>
-  
 
-  <article>
-      <div class='tours'>
+      <div class="centered">Travello</div>
+      <div class="centered2">World Best Travel Agency</div>
+      <button class="mainButton">Book Now</button>
+    </div>
+
+    <!-- TravellingApp Navigation end -->
+
+
+    <!-- TravellingApp gallery start -->
+    <div class="gallery">
+      <h1 class="gallery-text">Gallery</h1>
+      <div class="countries">
+        <div class="countries-width">
+          <img
+            src="https://ccsa.cc/image/program_covers/Scotland/Snowy%20Peaks%20of%20Scotland.jpg"
+            alt=""
+          />
+          <div class="countries-description">Scotland</div>
+        </div>
+
+        <div class="countries-width">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Victoria_Harbour%2C_Canada.jpg/800px-Victoria_Harbour%2C_Canada.jpg"
+            alt=""
+          />
+          <div class="countries-description">Canada</div>
+        </div>
+
+        <div class="countries-width">
+          <img
+            src="http://www.witf.org/community/witf-events/Italy_600x338.jpg"
+            alt=""
+          />
+          <div class="countries-description">Italy</div>
+        </div>
+
+        <div class="countries-width">
+          <img
+            src="https://i.huffpost.com/gen/1843222/thumbs/o-LAKE-GRASMERE-900.jpg?1"
+            alt=""
+          />
+          <div class="countries-description">England</div>
+        </div>
+
+        <div class="countries-width">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_southeastern_Iceland.jpg/800px-J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_southeastern_Iceland.jpg"
+            alt=""
+          />
+          <div class="countries-description">Iceland</div>
+        </div>
+
+        <div class="countries-width">
+          <img
+            src="https://static.thousandwonders.net/New.Zealand.original.1909.jpg"
+            alt=""
+          />
+          <div class="countries-description zealand">New Zealand</div>
+        </div>
+      </div>
+    </div>
+    <!-- TravellingApp gallery end -->
+
+
+    <!-- TravellingApp tours description start-->
+    <article>
+    <div class="tours">
+
+        <div class="tours-description">
+
+            <div class="tours-picture">
+                <img
+                src="https://www.riotgames.com/darkroom/1370/f5f167c525dd1f3989bcfe9ebd3c7995:d46210329d6d94499a4df3bb4e74a1ef/barcelona-main.jpg"
+                alt=""
+                />
+                <div class="tours-price">$499</div>
+            </div>
+
+                <h1 class="tours-font">Tours in Barcelona</h1>
+
+                <div class="tours-stars">
+                15 Tours
+                    <div class="star-images">
+                        <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="tours-arrow">
+                <a href="#"> <i class="fas fa-long-arrow-alt-right fa-2x"></i> </a>
+                </div>
+        </div>
+
+        <div class="tours-description">
+
+            <div class="tours-picture">
+                <img
+                src="https://media.timeout.com/images/105167564/image.jpg"
+                alt=""
+                    />
+
+                <div class="tours-price">$499</div>
+            </div>
+            <h1 class="tours-font">Tours in Chicago</h1>
+            <div class="tours-stars">
+                15 Tours
+                <div class="star-images">
+                <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="tours-arrow">
+                <a href="#"> <i class="fas fa-long-arrow-alt-right fa-2x"></i></a>
+            </div>
+        </div>
+
+        <div class="tours-description">
+
+            <div class="tours-picture">
+                <img
+                src="https://d3hne3c382ip58.cloudfront.net/resized/750x420/day-tour-of-kathmandu-valley-tour-2-23925_1531909260.JPG"
+                alt=""
+                />
+
+                <div class="tours-price">$499</div>
+
+            </div>
+
+            <h1 class="tours-font">Tours in Kathmandu</h1>
+            <div class="tours-stars">
+                15 Tours
+                <div class="star-images">
+                <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="tours-arrow">
+            <a href="#"> <i class="fas fa-long-arrow-alt-right fa-2x"></i></a>
+            </div>
+        </div>
+
+        <div class="tours-description">
+            
+            <div class="tours-picture">
+                <img
+                 src="https://media-cdn.tripadvisor.com/media/photo-s/12/f8/66/ce/paris-in-one-day-sightseeing.jpg"
+                alt=""
+                />
+                <div class="tours-price">$499</div>
+            </div>
+
+            <h1 class="tours-font">Tours in Paris</h1>
+            <div class="tours-stars">
+                15 Tours
+                <div class="star-images">
+                <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="tours-arrow">
+                <a href="#"> <i class="fas fa-long-arrow-alt-right fa-2x"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+    </article>
+
+    <!-- TravellingApp tours description end-->
+
+    <!-- TravellingApp video section start-->
+    <section>
+            <div class='video'>
+                    <iframe width="100%" height="550" src="https://www.youtube.com/embed/FVZz8qMHqbs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+    </section>
+    <!-- TravellingApp video section end-->
+
+    <!-- TravellingApp popular destination start-->
+    <article class="experts">
       
-           <div class="tours-description">
-              <div class="tours-picture">
-              <img src="https://www.riotgames.com/darkroom/1370/f5f167c525dd1f3989bcfe9ebd3c7995:d46210329d6d94499a4df3bb4e74a1ef/barcelona-main.jpg" alt="">
-              <div class='tours-price'>$499</div>
-          </div>
-              <h1 class='tours-font'>Tours in Barcelona</h1>
-              <div class='tours-stars'>
-                  15 Tours
-                  <div class='star-images'>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                  </div>
-              </div>
-              <div class="tours-arrow"><i class="fas fa-long-arrow-alt-right fa-2x"></i></div>
+        <div class="expert-picture">
+            <img
+                src="https://d1yn1kh78jj1rr.cloudfront.net/image/preview/rDtN98Qoishumwih/graphicstock-happy-pretty-young-woman-standing-with-arms-crossed-in-office_B_bbfEmH2g_SB_PM.jpg"
+                alt=""
+            />
+        </div>
 
+        <div class="expert-text">
+            <h1 class="expert-h1">We are expert for travelling</h1>
+            <p class="expert-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                distinctio magni enim deleniti error maiores accusamus et suscipit
+                illum, ipsam mollitia, eligendi tenetur iure optio, voluptatum
+                similique ipsum ea! Expedita? Iure vel, quam totam dicta non quas hic
+                provident, ut quasi excepturi earum inventore. Labore aperiam
+                consequuntur delectus quisquam mollitia officiis magnam, nemo, dolorem
+                ex reprehenderit, qui recusandae nesciunt voluptatem.
+            </p>
+        </div>
+
+    </article>
+
+    <article>
+
+        <div class="article-box">
+                <div class="divide">
+                <div class="description-line"></div>
+            <h1 class="description">Popular Destination for travelling</h1>
+            <p class="under-description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
+                voluptatibus facere beatae deserunt consequuntur laudantium
+                reiciendis obcaecati non, amet harum ducimus nulla corporis aliquam
+                voluptas unde dolor suscipit nam numquam.Doloribus laudantium sint
+                dolorem aut temporibus ut deserunt ipsa non quam in harum,
+                voluptates ipsum nobis nulla ipsam eveniet culpa voluptas incidunt!
+                Delectus temporibus adipisci totam. Vero provident beatae fuga?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </p>
+            <div class="button-div">
+            <button onclick="show()" class="description-button">
+              View More
+            </button>
+            </div>
+                </div>
+            <div id="root"></div>
       </div>
+    </article>
 
-      <div class="tours-description">
-              
-          <div class='tours-picture'>
-              <img  src="https://media.timeout.com/images/105167564/image.jpg" alt="">
-              <div class='tours-price'>$499</div>
-          </div>
-              <h1 class='tours-font'>Tours in Chicago</h1>
-                  <div class='tours-stars'>
-                      15 Tours
-                      <div class='star-images'>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                      </div>
-                  </div>
-                  <div class="tours-arrow"><i class="fas fa-long-arrow-alt-right fa-2x"></i></div>
-
-              
-      </div>
-
-      <div class="tours-description">
-
-              <div class='tours-picture'>
-                  <img  src="https://d3hne3c382ip58.cloudfront.net/resized/750x420/day-tour-of-kathmandu-valley-tour-2-23925_1531909260.JPG" alt="">
-                  
-                  <div class='tours-price'>$499</div>
-              </div>
-              <h1 class='tours-font'>Tours in Kathmandu</h1>
-              <div class='tours-stars'>
-                          15 Tours
-                      <div class='star-images'>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                  </div>
-                  </div>
-                  <div class="tours-arrow"><i class="fas fa-long-arrow-alt-right fa-2x"></i></div>
-      </div>
-
-      <div class="tours-description">
-              <div class='tours-picture' >
-                      <img src="https://media-cdn.tripadvisor.com/media/photo-s/12/f8/66/ce/paris-in-one-day-sightseeing.jpg" alt="">
-                      <div class='tours-price'>$499</div>
-              </div>
-                  <h1 class='tours-font'>Tours in Paris</h1>
-                      <div class='tours-stars'>
-                              15 Tours
-                          <div class='star-images'>
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                          </div>
-                      </div>
-                      <div class="tours-arrow"><i class="fas fa-long-arrow-alt-right fa-2x"></i></div>
-
-              </div>
-
-      </div>
-
-  </article>
+        <!-- TravellingApp popular destination end-->
 
 
-  <article class='experts'>
-      <div class='expert-picture'>
-      <img src="https://d1yn1kh78jj1rr.cloudfront.net/image/preview/rDtN98Qoishumwih/graphicstock-happy-pretty-young-woman-standing-with-arms-crossed-in-office_B_bbfEmH2g_SB_PM.jpg" alt="">
-      </div>
+     <!-- TravellingApp popular travellers start-->
 
-      <div class="expert-text">
-          <h1 class='expert-h1'>We are expert for travelling</h1>
-          <p class='expert-description'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus distinctio magni enim deleniti error maiores accusamus et suscipit illum, ipsam mollitia, eligendi tenetur iure optio, voluptatum similique ipsum ea! Expedita?
-              Iure vel, quam totam dicta non quas hic provident, ut quasi excepturi earum inventore. Labore aperiam consequuntur delectus quisquam mollitia officiis magnam, nemo, dolorem ex reprehenderit, qui recusandae nesciunt voluptatem.
-          </p>
-      </div>
-  </article>
+    <article>
+    <div class="popular-travellers">
+    <div class="popular-travellers-left">
+        <div class="popular-traveller-line"></div>
+        <div class="popular-traveller-title">
+         Our most popular travellers
+        </div>  
+        <div class="popular-traveller-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi facere delectus aliquam ratione corporis accusamus dolorem quibusdam necessitatibus dolorum voluptates nobis, perspiciatis debitis blanditiis! Alias, animi. Tenetur amet placeat perferendis.
+          Asperiores accusamus autem magnam modi maxime.
+          <div class="popular-traveller-button">
+              <button class='popular-button'>View More</button>
+            </div>
+        </div>
+    </div>
+    <div class='leftarrow'><i class="fas fa-arrow-circle-left" id='popular-travellers-button'></i></div>
+    <div id="popular-travellers-right">
 
-  <article>
-          <div class="article-box">
-          <div class='divide'>
-          <div class='line2'>
-          </div>
-          <h1 class='description'>Popular Destination for travelling</h1>
-          <p class='under-description'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus facere beatae deserunt consequuntur laudantium reiciendis obcaecati non, amet harum ducimus nulla corporis aliquam voluptas unde dolor suscipit nam numquam.Doloribus laudantium sint dolorem aut temporibus ut deserunt ipsa non quam in harum, voluptates ipsum nobis nulla ipsam eveniet culpa voluptas incidunt! Delectus temporibus adipisci totam. Vero provident beatae fuga? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas enim delectus alias repellat optio impedit odit, libero voluptatum dolorem sequi sapiente tenetur mollitia similique ex sunt fuga corrupti. Et, ex.</p>
-          <div class='button-div'>
-              <button onclick='show()' class='description-button'>View More</button>
-          </div>
-          </div>
+    </div>
+    </div>
+    </article>
 
-          <div class="scrolling-wrapper">
-                  <div class="card">
-                          <div class='card-picture'>
-                                  <img  src="https://www.riotgames.com/darkroom/1370/f5f167c525dd1f3989bcfe9ebd3c7995:d46210329d6d94499a4df3bb4e74a1ef/barcelona-main.jpg" alt="">
-                                  
-                                  <div class='card-description'>Barcelona</div>
-                          </div>
-                  </div>
-                  <div class="card">
-                          <div class='card-picture'>
-                                  <img  src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_900,c_fill,g_auto,h_506,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F150806121501-sg-50---lead-image.jpg" alt="">
-                                  
-                                  <div class='card-description'>Singapore</div>
-                          </div>
-                  </div>
-                  <div class="card">
-                          <div class='card-picture'>
-                                  <img  src="https://www.abc.net.au/news/image/6887602-3x2-700x467.jpg" alt="">
-                                  
-                                  <div class='card-description'>Sydney</div>
-                          </div>
-                  </div>
-                  <div class="card">
-                          <div class='card-picture'>
-                                  <img  src="http://intbilisi.com/admin/uploads/images/pic2_20180309_151416.jpg" alt="">
-                                  
-                                  <div class='card-description'>Tbilisi</div>
-                          </div>
-                  </div>
-          </div>
-      </div>
-  </article>
+     <!-- TravellingApp popular travellers end-->
 
-
-
-  <footer>
-      <div class='image2'>
-          <img src="https://static1.squarespace.com/static/556f16d7e4b0eafb6eb48e02/5697a7aa5a566807bca4e1b5/57a092805016e13b82b0fc38/1470141072806/Everest_Ridge.png?format=1000w" alt="">
-      </div>
-      <div class="line">
-      </div>
+    <footer>
+      <div class="line"></div>
       <h1>Subscribe</h1>
       <h2>to out newslatter</h2>
-  <form>
-          <input type="text" placeholder="Enter your email">
-          <button class='subscribe-button'>Subscribe</button>
-
-  </form>
+      <form class="subscribe-form">
+        <input type="text" placeholder="Enter your email" />
+        <button class="subscribe-button">Subscribe</button>
+      </form>
       <div class="footbar">
-          <div class="section">
+        <div class="section">
           <ul>
-              <li class='first'>Travel</li>    
-              <li><a href="#home">Find Travel</a></li>
-              <li><a href="#news">Find Travelers</a></li>
-              <li><a href="#contact">I'm a Traveler</a></li>
+            <li class="first">Travel</li>
+            <li><a href="#home">Find Travel</a></li>
+            <li><a href="#news">Find Travelers</a></li>
+            <li><a href="#contact">I'm a Traveler</a></li>
           </ul>
-          </div>
-          <div class="section">
-                  <ul>   
-                      <li class='first'>Travel</li>    
-                      <li><a href="#home">Find Travel</a></li>
-                      <li><a href="#news">Find Travelers</a></li>
-                      <li><a href="#contact">I'm a Traveler</a></li>
-                  </ul>
-          </div>
-          <div class="section">
-                  <ul>   
-                      <li class='first'>Travel</li>     
-                      <li><a href="#home">Find Travel</a></li>
-                      <li><a href="#news">Find Travelers</a></li>
-                      <li><a href="#contact">I'm a Traveler</a></li>
-                  </ul>
-          </div>
-          <div class="section-two">
-                  <h2>TingoTravel</h2>
+        </div>
+        <div class="section">
+          <ul>
+            <li class="first">Travel</li>
+            <li><a href="#home">Find Travel</a></li>
+            <li><a href="#news">Find Travelers</a></li>
+            <li><a href="#contact">I'm a Traveler</a></li>
+          </ul>
+        </div>
+        <div class="section">
+          <ul>
+            <li class="first">Travel</li>
+            <li><a href="#home">Find Travel</a></li>
+            <li><a href="#news">Find Travelers</a></li>
+            <li><a href="#contact">I'm a Traveler</a></li>
+          </ul>
+        </div>
+        <div class="section-two">
+          <h2>TingoTravel</h2>
 
-                  <p class='section-two-p'>Follow us on</p>
-              <div class="icons">
-                  <img class='twitter' src="https://img.icons8.com/color/2x/twitter.png" alt="">
-                  <img class='instagram' src="https://img.icons8.com/windows/2x/instagram-new.png" alt="">
-                  <img class='facebook' src="https://img.icons8.com/ios/2x/facebook.png" alt="">
-              </div>
+          <p class="section-two-p">Follow us on</p>
+          <div class="icons">
+            <img
+              class="twitter"
+              src="https://img.icons8.com/color/2x/twitter.png"
+              alt=""
+            />
+            <img
+              class="instagram"
+              src="https://img.icons8.com/windows/2x/instagram-new.png"
+              alt=""
+            />
+            <img
+              class="facebook"
+              src="https://img.icons8.com/ios/2x/facebook.png"
+              alt=""
+            />
+            <!-- <i class="fab fa-facebook-messenger"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-instagram"></i> -->
           </div>
+        </div>
       </div>
-  </footer>
-
-
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    </footer>
+  <script src="App2.js"></script>
   </body>
 </html>
