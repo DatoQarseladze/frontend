@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export default class Header extends Component {
     render() {
         return (
-            <div className="App">
                 <header>
                     <div className="wrapper">
 
@@ -27,7 +26,6 @@ export default class Header extends Component {
                         </div>
                     </div>
             </header>
-          </div>
                 );
         }
             
