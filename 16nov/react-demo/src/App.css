@@ -378,3 +378,14 @@ main{
   display:flex;
   justify-content: space-between;
 }
+
+.article-end-button{
+  text-align: center;
+  color: #59568b;
+  font-weight: 400;
+  font-size: 15px; 
+  border-color: #f56b5a;
+  border-style: solid;
+  border-radius: 100px;
+  padding: 15px 0 15px 0;
+}
