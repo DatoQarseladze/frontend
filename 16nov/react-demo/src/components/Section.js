@@ -1,25 +1,25 @@
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
+import Icon from './Icon'
 
 export default class Section extends Component {
-    render(){
-        return(
-            <section>
-            <div className="our-clients">
-              Our Clients
+  render() {
+    return (
+      <section>
+        <div className="our-clients">
+          Our Clients
             </div>
-              <i className="fab fa-react"></i>
-      
-              <i className="fab fa-firefox"></i>
-            
-      
-              <i className="fab fa-js"></i>
-            
-      
-            <div className='view-all'>
-              VIEW ALL
+
+        <Icon class={'fab fa-react'} />
+
+        <Icon class={'fab fa-firefox'} />
+        <Icon class={'fab fa-js'} />
+
+
+        <div className='view-all'>
+          VIEW ALL
             </div>
-          </section>
-        )
-    }
+      </section>
+
+    )
+  }
 }

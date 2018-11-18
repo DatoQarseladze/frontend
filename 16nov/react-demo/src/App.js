@@ -7,6 +7,7 @@ import Mid from './components/Mid'
 import Slider from './components/Slider'
 import ArticleEnd from './components/ArticleEnd'
 import Section from './components/Section'
+import Footer from './components/Footer'
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
       <Slider />
       <ArticleEnd />
       <Section />
+      <Footer />
       </div>
     );
   }
