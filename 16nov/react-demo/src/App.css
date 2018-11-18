@@ -235,7 +235,7 @@ main{
 }
 
 .article-graphic{
-  background-image: url('/pictures/graphic.jpg');
+  background-image: url('../pictures/graphic.jpg');
   background-size: cover; 
   width: 100%;
   height: 380px;
@@ -246,7 +246,7 @@ main{
 }
 
 .article-web{
-  background-image: url('/pictures/web.jpg');
+  background-image: url('../pictures/web.jpg');
   background-size: cover; 
   width: 100%;
   height: 380px;
@@ -291,7 +291,7 @@ main{
 }
 
 .article-orange{
-  background-image: url('/pictures/orange.jpeg');
+  background-image: url('../pictures/orange.jpeg');
   background-size: cover; 
   width: 100%;
   height: 380px;
@@ -302,7 +302,7 @@ main{
 }
 
 .article-social{
-  background-image: url('/pictures/social.jpg');
+  background-image: url('../pictures/social.jpg');
   background-size: cover; 
   width: 100%;
   height: 380px;
