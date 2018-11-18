@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import Image from './Image'
+import Button from './Button'
 
 export default class Main extends Component {
     render(){
@@ -12,7 +13,8 @@ export default class Main extends Component {
             <div className="main-text">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi impedit omnis nobis a?
             </div>
-            <div className="main-button">LEARN MORE <i className="fas fa-angle-right"></i></div>
+            <Button class='main-button' text={'LEARN MORE'} iconClass={'fas fa-angle-right'} /> 
+            {/* <div className="main-button">LEARN MORE <i className="fas fa-angle-right"></i></div> */}
             <div className="main-slider">
                         <li className="slider-dot"></li>
                         <li className="slider-dot"></li>
@@ -20,9 +22,8 @@ export default class Main extends Component {
                         <li className="slider-dot"></li>
             </div>
         </div>  
-        <div className="main-picture">
-              
-        </div>
+      
+        <Image class='main-picture' src={'/pictures/characters.jpg'} />
     </main>
         )
     }
