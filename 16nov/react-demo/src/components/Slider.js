@@ -4,10 +4,11 @@ export default class Slider extends Component {
   constructor(props) {
     super(props)
 
+    // https://files.slack.com/files-pri/TAHE5KEM9-FE4U33NL8/web_site_design_portfolio_character_-_copy__3_.jpg
     this.state = {
       images: [
-        "https://files.slack.com/files-pri/TAHE5KEM9-FE4U33NL8/web_site_design_portfolio_character_-_copy__3_.jpg",
-        "https://files.slack.com/files-pri/TAHE5KEM9-FE5S80NRK/web_site_design_portfolio_character_-_copy__7_.jpg",
+        "/pictures/slider.jpg",
+        "/pictures/orange.jpeg",
         "https://files.slack.com/files-pri/TAHE5KEM9-FE52KMPQR/web_site_design_portfolio_character_-_copy__4_.jpg",
         "https://media-cdn.tripadvisor.com/media/photo-s/12/f8/66/ce/paris-in-one-day-sightseeing.jpg",
       ],
