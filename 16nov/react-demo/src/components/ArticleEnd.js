@@ -33,7 +33,9 @@ export default class ArticleEnd extends Component{
                       Cusco Barista
                     </div>
                     <div className="article-line"></div>
+
                 </div>
+                
               </div>
             </div>
           </article>

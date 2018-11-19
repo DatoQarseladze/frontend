@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Icon from './Icon';
 
 
 export default class Footer extends Component {
@@ -12,8 +12,8 @@ export default class Footer extends Component {
                 </div>
                 <div class="footer-wrapper">
                     <div class="logo">Dopos</div>
-                    <div class="navigation">
-                        <nav class='nav-desc'>
+                    <div class="navigation-footer">
+                        <nav class='nav-desc-footer'>
                             <a href="#">HOME</a>
                             <a href="#">PRODUCTS</a>
                             <a href="#">AWARDS</a>
@@ -21,10 +21,10 @@ export default class Footer extends Component {
                         </nav>
                     </div>
                     <div class="footer-icons">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-vimeo-v"></i>
+                        <Icon class={'fab fa-facebook-f'} />
+                        <Icon class={'fab fa-twitter'} />
+                        <Icon class={'fab fa-instagram'} />
+                        <Icon class={'fab fa-vimeo-v'} />
                     </div>
                 </div>
             </footer>
