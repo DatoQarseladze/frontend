@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/frontend/16nov/react-demo/static/js/runtime~main.2c3309c0.js"
   },
   {
-    "revision": "2ca76d6f45b6f1a2d2cf",
-    "url": "/frontend/16nov/react-demo/static/js/main.2ca76d6f.chunk.js"
+    "revision": "636bd3c9669e76d87354",
+    "url": "/frontend/16nov/react-demo/static/js/main.636bd3c9.chunk.js"
   },
   {
     "revision": "0cd6058fc3c24877ba89",
     "url": "/frontend/16nov/react-demo/static/js/1.0cd6058f.chunk.js"
   },
   {
-    "revision": "2ca76d6f45b6f1a2d2cf",
-    "url": "/frontend/16nov/react-demo/static/css/main.b2249339.chunk.css"
+    "revision": "636bd3c9669e76d87354",
+    "url": "/frontend/16nov/react-demo/static/css/main.56b2dd65.chunk.css"
   },
   {
-    "revision": "1079bfd4beaf939382f2d4401187c91d",
+    "revision": "7e893f92f1cb1076743884b47eb4ff08",
     "url": "/frontend/16nov/react-demo/index.html"
   }
 ];

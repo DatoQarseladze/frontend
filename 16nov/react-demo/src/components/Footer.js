@@ -8,9 +8,9 @@ export default class Footer extends Component {
 
 
             <footer>
-                <div className="divide-line">
-                </div>
+              
                 <div class="footer-wrapper">
+               
                     <div class="logo">Dopos</div>
                     <div class="navigation-footer">
                         <nav class='nav-desc-footer'>
