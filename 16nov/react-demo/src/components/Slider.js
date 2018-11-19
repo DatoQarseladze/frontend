@@ -4,7 +4,6 @@ export default class Slider extends Component {
   constructor(props) {
     super(props)
 
-    // https://files.slack.com/files-pri/TAHE5KEM9-FE4U33NL8/web_site_design_portfolio_character_-_copy__3_.jpg
     this.state = {
       images: [
         "/pictures/slider.jpg",
