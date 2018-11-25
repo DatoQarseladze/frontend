@@ -1,13 +1,13 @@
 {
-  "main.css": "/frontend/16nov/react-demo/static/css/main.56b2dd65.chunk.css",
-  "main.js": "/frontend/16nov/react-demo/static/js/main.636bd3c9.chunk.js",
-  "main.js.map": "/frontend/16nov/react-demo/static/js/main.636bd3c9.chunk.js.map",
+  "main.css": "/frontend/16nov/react-demo/static/css/main.270be8df.chunk.css",
+  "main.js": "/frontend/16nov/react-demo/static/js/main.624016cc.chunk.js",
+  "main.js.map": "/frontend/16nov/react-demo/static/js/main.624016cc.chunk.js.map",
   "static/js/1.0cd6058f.chunk.js": "/frontend/16nov/react-demo/static/js/1.0cd6058f.chunk.js",
   "static/js/1.0cd6058f.chunk.js.map": "/frontend/16nov/react-demo/static/js/1.0cd6058f.chunk.js.map",
   "runtime~main.js": "/frontend/16nov/react-demo/static/js/runtime~main.2c3309c0.js",
   "runtime~main.js.map": "/frontend/16nov/react-demo/static/js/runtime~main.2c3309c0.js.map",
-  "static/css/main.56b2dd65.chunk.css.map": "/frontend/16nov/react-demo/static/css/main.56b2dd65.chunk.css.map",
+  "static/css/main.270be8df.chunk.css.map": "/frontend/16nov/react-demo/static/css/main.270be8df.chunk.css.map",
   "index.html": "/frontend/16nov/react-demo/index.html",
-  "precache-manifest.08de9fb98a0406d9938f202feaa54494.js": "/frontend/16nov/react-demo/precache-manifest.08de9fb98a0406d9938f202feaa54494.js",
+  "precache-manifest.9b6dde7191905c7b1181525951475649.js": "/frontend/16nov/react-demo/precache-manifest.9b6dde7191905c7b1181525951475649.js",
   "service-worker.js": "/frontend/16nov/react-demo/service-worker.js"
 }

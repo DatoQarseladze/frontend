@@ -7,7 +7,7 @@ export default class Footer extends Component {
         return (
 
 
-            <footer>
+           
               
                 <div class="footer-wrapper">
                
@@ -27,7 +27,7 @@ export default class Footer extends Component {
                         <Icon class={'fab fa-vimeo-v'} />
                     </div>
                 </div>
-            </footer>
+        
         )
     }
 }
