@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.header{
+    margin: auto;
+    margin-top: 10px;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tri{
+    cursor: pointer;
+}
+.nav > a{
+    text-decoration: none;
+    color:#000000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+    font-family: 'myfont';
+    src: url('D:/frontend/geolab/fonts/bpg_nino_mkhedruli_bold.ttf')
+}
+
+.nav > a:hover{
+    color:#cef0ef
+}
+
+section{
+    margin-top: 20px;
+}
+
+.image{
+    background-image: url('./pic/33.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 700px;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.image-title{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    text-align: center;
+    color: #fff;
+    font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+
+}
+
+.image-title > h4{
+    font-weight:  500;
+}
+
+
+.section-text{
+    margin: 0 auto;
+    font-size: 25px;
+    width: 200px;
+    text-align: center;
+}
+
+.section-text:hover{
+    border-bottom: 2px solid black;
+    width: 150px;
+}
+
+.section-main{
+    width: 90%;
+    display: flex;
+    margin: 30px auto 0;
+}
+.section-main-child{
+    margin-right: 20px;
+    border: 1px solid gray;
+    text-align: center;
+}
+.section-main-child > img{
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+}
+.section-main-child > h4 {
+    margin-top: 30px;
+}
+
+.main-p{
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 80%;
+    text-align: center;
+}
+
+.my-works-text{
+    margin: 50px auto 0;
+    font-size: 25px;
+    width: 250px;
+    text-align: center;
+}
+
+.my-works-text:hover{
+    border-bottom: 2px solid black;
+    width: 250px;
+}
+
+
+.my-works{
+    width: 90%;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.works{
+    margin-right: 10px;
+    margin-top: 30px;
+    border: 1px solid blue;
+}
+.works img{
+    border: 1px solid black;
+    width: 350px;
+    height: 250px;
+}
+.works1{
+    background-image: url('./pic/work1.png');
+    background-size: cover;
+    background-position: center center;
+    width: 350px;
+    height: 250px;
+}
+.works2{
+    background-image: url('./pic/work2.png');
+    background-size: cover;
+    background-position: center center;
+    width: 350px;
+    height: 250px;
+}
+.works3{
+    background-image: url('./pic/work3.png');
+    background-size: cover;
+    background-position: center center;
+    width: 350px;
+    height: 250px;
+}
+.works:hover{
+    background-image: url('./pic/hover.jpeg');
+    background-size: cover;
+    background-position: center center;
+    width: 350px;
+    height: 250px;
+}
