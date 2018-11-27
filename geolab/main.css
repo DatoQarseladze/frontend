@@ -415,7 +415,7 @@ footer{
 }
 }
 
-@media only screen and (max-width: 899px) and (min-width: 200px){
+@media only screen and (max-width: 899px) and (min-width: 100px){
     .header{
         width: 48%;
         margin: 20px auto 20px;
