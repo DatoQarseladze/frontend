@@ -544,7 +544,7 @@ footer{
         grid-template-columns: repeat(1,1fr);
     }
     .section-main-child{
-        width: 50%;
+        width: 100%;
         margin: 10px auto 10px;
     }
     .main-p{
@@ -565,7 +565,7 @@ footer{
         grid-template-columns: repeat(1,1fr);
     }
     .works{
-        width: 50%;
+        width: 100%;
         margin: 10px auto;
     }
     .works:hover{
@@ -601,6 +601,7 @@ footer{
     }
     .last-section{
         width:100%;
+        background: blue;
         margin: 0 auto;
     }
     .title{
