@@ -453,12 +453,12 @@ footer{
         transition: 1s all;
     }
     .active{
-        right: 180px;
+        right: 160px;
         z-index: 3;
     }
     .active-container{
         top: 50px;
-        right: 66px;
+        right: 56px;
         z-index: 2;
     }  
    
@@ -580,12 +580,12 @@ footer{
     }
     .container-image{
         margin: 20px auto;
-        width: 50%;
+        width: 80%;
         background-attachment: center center;
     }
     .container-article{
-        width: 35%;
-        margin: 0 auto;
+        width: 75%;
+        margin: 10px auto;
     }
     .about{
         font-size: 12px;
