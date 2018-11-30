@@ -473,12 +473,12 @@ footer {
     transition: 1s all;
   }
   .active {
-    right: 160px;
+    right: 43%;
     z-index: 3;
   }
   .active-container {
     top: 50px;
-    right: 56px;
+    right: 8%;
     z-index: 2;
   }
 
