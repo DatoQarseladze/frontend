@@ -470,7 +470,7 @@ footer {
     transition: 1s all;
   }
   .active {
-    right: 40%;
+    right: 42%;
     z-index: 3;
   }
   .active-container {
@@ -550,7 +550,7 @@ footer {
   .image-title {
     position: absolute;
     top: 30%;
-    left: 27%;
+    left: 28%;
   }
   .image-title h1{
       font-size: 12px;
