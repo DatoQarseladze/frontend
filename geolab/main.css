@@ -527,6 +527,18 @@ footer {
     background: #c5e7f0;
     transition: 0.3s;
   }
+  .sidebarBtn.active span:before{
+      top:0;
+      transform: rotate(45deg);
+  }
+  .sidebarBtn.active span:after{
+    top:0;
+    transform: rotate(135deg);
+}
+  .sidebarBtn.active span{
+    background: rgba(0,0,0,0);
+}
+
   .image-section {
     width: 90%;
     margin: 0 auto;
@@ -541,7 +553,7 @@ footer {
   .image-title {
     position: absolute;
     top: 30%;
-    left: 25%;
+    left: 27%;
   }
   .image-title h1{
       font-size: 12px;
