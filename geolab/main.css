@@ -435,9 +435,7 @@ footer {
 }
 
 @media only screen and (max-width: 899px) and (min-width: 100px) {
-    &:hover{
-    @content;
-    }
+ 
   .header {
     width: 100%;
     margin: 20px auto 20px;
@@ -543,7 +541,7 @@ footer {
   .image-title {
     position: absolute;
     top: 30%;
-    left: 40%;
+    left: 28%;
   }
   .image-title h1{
       font-size: 12px;
