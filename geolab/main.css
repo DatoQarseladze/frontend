@@ -450,13 +450,10 @@ footer {
     z-index: 3;
   }
   .nav-container {
-    width: 300px;
+    width: 90%;
     top: 70px;
     height: 300px;
     right: -1500px;
-    margin: 0 auto;
-    text-align: center;
-    align-items: center;
     background: #b9edfa;
     position: fixed;
   }
@@ -680,7 +677,7 @@ footer {
     margin: 0 auto;
   }
   .footer-desc p {
-    font-size: 10px;
+    font-size: 6px;
     margin-left: 5px;
   }
   .footer-logo {
