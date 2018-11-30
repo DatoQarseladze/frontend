@@ -470,7 +470,7 @@ footer {
     transition: 1s all;
   }
   .active {
-    right: 43%;
+    right: 40%;
     z-index: 3;
   }
   .active-container {
