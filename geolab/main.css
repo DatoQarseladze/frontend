@@ -305,25 +305,29 @@ footer {
   .nav {
     position: fixed;
     align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    width: 140px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 100px;
     text-align: center;
     top: 120px;
     right: -150px;
-    height: 400px;
-    transition: 1s all;
+    height: 200px;
+    transition: 1.5s ease-in-out;
   }
-  .nav a {
+  .nav a{
     margin: 0 auto;
+    font-size: 13px;
+    font-family: glaho;
+ 
+  
   }
 
   .active {
-    right: 500px;
+    right: 44%;
     z-index: 2;
   }
   .active-container {
-    right: 180px;
+    right: 16%;
     z-index: 2;
   }
   .tri img{
@@ -431,6 +435,9 @@ footer {
 }
 
 @media only screen and (max-width: 899px) and (min-width: 100px) {
+    &:hover{
+    @content;
+    }
   .header {
     width: 100%;
     margin: 20px auto 20px;
@@ -523,24 +530,27 @@ footer {
     transition: 0.3s;
   }
   .image-section {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
   }
   .image {
-    width: 300px;
-    max-height: 100px;
+    width: 100%;
+    max-height: 300px;
     background-size: cover;
     background-position: center center;
   }
 
   .image-title {
     position: absolute;
-    top: 20%;
-    left: 38%;
-    font-size: 5px;
-    text-align: center;
-    color: #fff;
-    font-family: 'BPG Nino Mkhedruli Bold', sans-serif;
+    top: 30%;
+    left: 40%;
+  }
+  .image-title h1{
+      font-size: 12px;
+  }
+  .image-title h4{
+      margin: 0 auto;
+      font-size: 10px;
   }
 
   .section-text {
@@ -580,8 +590,8 @@ footer {
     width: 100%;
     margin: 10px auto;
   }
-  .works:hover {
-    width: 290px;
+  .works:hover{
+      width: 100%;
   }
   .container {
     width: 100%;
