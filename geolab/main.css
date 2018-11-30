@@ -475,7 +475,7 @@ footer {
   }
   .active-container {
     top: 50px;
-    right: 120px;
+    right: 8%;
     z-index: 3;
   }
 
