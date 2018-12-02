@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { getMovies } from '../services/fakeMovieService';
 import '../App.css'
+import Like from './common/like'
+import Pagination from './common/pagination';
+import {paginate} from '../utils/paginate';
 
 class Movies extends Component{
     state = {
-        movies: getMovies()
+        movies: getMovies(),
+        pageSize: 2,
+        currentPage: 1
     };
 
     handleDelete = movie => {
@@ -12,32 +17,61 @@ class Movies extends Component{
      this.setState({movies});
     }
 
+    handleLike = movie =>{
+    const movies = [...this.state.movies];
+    const index = this.state.movies.indexOf(movie);
+    movies[index].liked = !movies[index].liked;
+    this.setState({ movies })
+    }
+
+    handlePageChange = page =>{
+        this.setState({ currentPage: page} )
+    }
+
     render(){ 
-        if (this.state.movies.length === 0) return <p>There are no movies in database</p>
+        const { length:count} = this.state.movies;
+        const { currentPage, pageSize, movies:allMovies } = this.state
+
+        if (count === 0) return <p>There are no movies in database</p>
+
+        const movies = paginate(allMovies, currentPage, pageSize);
+
         return(
         <React.Fragment>
-        <p>There are {this.state.movies.length} Movies</p>
+        <p>There are {count} Movies</p>
             <table className='table'>
             <thead>
                 <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Genre</th>
-                <th scope="col">Stock</th>
-                <th scope="col">Rate</th>
-                <th scope="col"></th>
+                <th >Title</th>
+                <th >Genre</th>
+                <th >Stock</th>
+                <th >Rate</th>
+                <th >Like</th>
+                <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
-                {this.state.movies.map(movie => 
+                {movies.map(movie => 
                 <tr key={movie._id}>
                 <td>{movie.title}</td>
                 <td>{movie.genre.name}</td>
                 <td>{movie.numberInStock}</td>
                 <td>{movie.dailyRentalRate}</td>
-                <td><button onClick={() => this.handleDelete(movie)} className="btn btn-danger btn-sm">Delete</button></td>
+                <td>
+                    <Like liked={movie.liked} onClickImitation={() => this.handleLike(movie)}/>
+                </td>
+                <td><button onClick={() => this.handleDelete(movie)} 
+                className="btn btn-danger btn-sm">Delete</button>
+                </td>
+          
             </tr>)}
             </tbody>
             </table>
+            <Pagination 
+            itemsCount={count}
+            currentPage={currentPage}
+            pageSize={pageSize}
+            onPageChange={this.handlePageChange}  />
             </React.Fragment>
         )
 
