@@ -29,5 +29,8 @@ it('Value component props check', () =>{
   const ValueComponent = Container.find(Value);
 
   expect(ValueComponent.props().value).toEqual(0)
+
   Container.setState({value:7})
+  ValueComponent = Container.find(Value);
+  expect
 })
