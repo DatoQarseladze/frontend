@@ -14,30 +14,26 @@ export const dec = (prev) =>{
   }
 }
 
+export const Value = ({value}) => <h3>{value}</h3>
+
 class App extends Component {
   state = {
-    count: 0,
+    value: 0,
   }
 
-  handleIncrement = () =>{
-    const count = this.state.count + 1;
-    this.setState({count})
+  inc = () =>{
+    this.setState(inc)
   }
-  handleDecrement = () =>{
-    const count = this.state.count + 1;
-    this.setState({count})
-  }
-  handleReset = () =>{
-    const count = this.state.count = 0;
-    this.setState({count})
+
+  dec = () =>{
+    this.setState(dec);
   }
   render() {
     return (
       <div>
-        <h1>{this.state.count}</h1>
-        <button onClick={this.handleIncrement}>Increment</button>
-        <button onClick={this.handleDecrement}>Decrement</button>
-        <button onClick={this.handleReset}>Reset</button>
+        <Value value={this.state.value} />
+        <button onClick={this.inc}>Increment</button>
+        <button onClick={this.dec}>Decrement</button>
       </div>
     );
   }
