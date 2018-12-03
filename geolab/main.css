@@ -630,12 +630,12 @@ footer {
     background-position: center center;
   }
 
-  /* .image-title {
+  .image-title {
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-  } */
+  } 
   .image-title h1{
       font-size: 10px;
   }
