@@ -8,21 +8,48 @@ import Slider from './components/Slider'
 import ArticleEnd from './components/ArticleEnd'
 import Section from './components/Section'
 import Footer from './components/Footer'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+
+
+
+
+const Home = () => {
+  return (
+    <>
+      <Header />
+          <Main />
+          <Article />
+          <Mid />
+          <Slider />
+          <ArticleEnd />
+          <Section />
+          <Footer />
+    </>
+  )
+}
+
+const Product = () => {
+  return (
+    <div>
+      <Header />
+          
+          <Footer />
+    </div>
+  )
+}
+
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-      <Header />
-      <Main />
-      <Article />
-      <Mid />
-      <Slider />
-      <ArticleEnd />
-      <Section />
-      <Footer />
-      </div>
+
+      <Router>
+        <div className="App">
+          <Route path="/" exact component={Home} />
+          <Route path="/products" component={Product} />
+        </div>
+      </Router >
     );
   }
 }

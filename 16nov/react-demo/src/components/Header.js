@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+
 
 export default class Header extends Component {
     render() {
@@ -10,11 +12,12 @@ export default class Header extends Component {
 
                     <div className="nav">
                         <nav className='nav-desc'>
-                            <a href="#">HOME</a>
-                            <a href="#">PRODUCTS</a>
-                            <a href="#">AWARDS</a>
-                            <a href="#">CONTACT US</a>
+                            <a href="#"><Link to='/home'>Home</Link></a>
+                            <a href="#"><Link to='/products'>Products</Link></a>
+                            <a href="#"><Link to='/awards'>Awards</Link></a>
+                            <a href="#"><Link to='/contactus'>Contact Us</Link></a>
                         </nav>
+                        
                     </div>
 
                     <div className="log">
