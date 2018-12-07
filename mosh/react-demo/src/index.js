@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import {BrowserRouter} from 'react-router-dom'
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css'
@@ -9,7 +10,10 @@ import Movies from './components/movie';
 // import Counters from './components/counters'
 
 
-ReactDOM.render(<Movies />, document.getElementById('root'));
+ReactDOM.render(
+<BrowserRouter>
+<Movies />
+</BrowserRouter>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
