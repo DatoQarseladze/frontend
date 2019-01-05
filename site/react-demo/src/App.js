@@ -7,6 +7,7 @@ export default class App extends Component {
 
     this.state = {
       images: [
+        
         "https://www.riotgames.com/darkroom/1370/f5f167c525dd1f3989bcfe9ebd3c7995:d46210329d6d94499a4df3bb4e74a1ef/barcelona-main.jpg",
         "https://media.timeout.com/images/105167564/image.jpg",
         "https://d3hne3c382ip58.cloudfront.net/resized/750x420/day-tour-of-kathmandu-valley-tour-2-23925_1531909260.JPG",

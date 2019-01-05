@@ -50,6 +50,8 @@
   padding: 5px;
   text-align: center;
 }
+
+.form--signup,
 .form--input,
 .btn--login{
   padding: 7px;
