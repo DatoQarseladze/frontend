@@ -18,6 +18,9 @@ p {
 p.small {
   font-size: 16px;
 }
+.navbar-right{
+  text-align: center;
+}
 
 .about-me-paragraph {
   font-size: 25px;
